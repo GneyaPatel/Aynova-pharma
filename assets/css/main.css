@@ -1,0 +1,1126 @@
+.banner {
+  background-image: url(/assets/images/common/bg-top.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 10px 150px 10px;
+  margin-top: -24px;
+  margin-bottom: -75px;
+  position: relative;
+}
+
+.banner-top-left p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.banner-top-left h2 {
+  font-size: 42px;
+}
+
+.certificate-logo img {
+  margin: 5px 10px 14px 0px;
+  border-radius: 0.4rem;
+}
+
+.banner-top-left button.quot-btn:hover {
+  cursor: pointer;
+}
+
+.banner-top-left button.quot-btn {
+  background: #176e9e;
+  outline: 0;
+  border: 0;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 16px 24px;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.banner-top-right {
+  margin-top: 18px;
+}
+
+#category .owl-stage {
+  display: flex;
+}
+
+#category .owl-stage .owl-item {
+  flex: 1;
+}
+
+#category .item .card {
+  background: linear-gradient(141deg, #7ab741 0%, #2c86b8 160%);
+  border: 0;
+  border-radius: 0.6rem;
+}
+
+.home-main-category-card {
+  margin: 5px 12px 12px 0px;
+  width: 120px;
+}
+
+#category .item img {
+  height: 75px;
+  width: auto;
+  display: unset;
+  padding: 10px;
+}
+
+#category .item .category-name {
+  min-height: 44px;
+  margin-top: 2px;
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1;
+}
+
+.about-content {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.about-content p.mb-0 {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.explore-product {
+  background-image: url(assets/image/bg-ptt.webp);
+  background-color: #f2f2f280;
+  background-blend-mode: overlay;
+  padding: 60px 0px;
+}
+
+.explore-product .product-img {
+  margin-top: 1.5rem;
+}
+
+.explore-product .product-img img {
+  border-radius: 0.87rem;
+  padding: 0px;
+  max-height: 190px;
+}
+
+.explore-product .product-img .view-all-card a {
+  height: 190px;
+  line-height: 190px;
+  text-align: center;
+  display: block;
+}
+
+.explore-product .product-img .view-all-card {
+  border-radius: 0.87rem;
+}
+
+.explore-product .product-img .view-all-card p {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.explore-product .product-img .view-all-card svg {
+  display: block;
+  border: 1px solid;
+  padding: 1px 12px;
+  margin-left: 10px;
+  margin-top: 6px;
+  border-radius: 14px;
+}
+
+.main-services {
+  margin-top: 75px;
+  margin-bottom: 50px;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 0 8px 8px 8px;
+  margin-top: 22px;
+}
+
+.service-card .two-part {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.service-card .two-part img {
+  background-color: #7ab741;
+  border-radius: 0;
+  padding: 8px;
+  margin-right: 20px;
+}
+
+.service-card p {
+  line-height: 1.3;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+.global-presence {
+  background-color: #176e9e;
+  padding: 3.5rem 0;
+  color: white;
+}
+
+.global-presence .ul-accordion .li-accordion .accordion-button:not(.collapsed) {
+  background-color: unset !important;
+  border: 0;
+  border-bottom: 1px solid;
+  box-shadow: none !important;
+  color: white !important;
+  padding-bottom: 5px;
+}
+
+.global-presence .ul-accordion .li-accordion .accordion-button::after {
+  font-family: "FontAwesome";
+  flex-shrink: 0;
+  content: "\f078";
+  background-image: unset;
+}
+
+.global-presence .ul-accordion .li-accordion button {
+  background-color: unset;
+  color: white;
+  padding: 4px 0px;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+}
+
+.global-presence .ul-accordion .li-accordion h2 {
+  font-size: 1rem;
+  font-family: Montserrat, sans-serif;
+}
+
+.global-presence .ul-accordion .li-accordion {
+  border: 1px solid;
+  padding: 6px 12px;
+  border-radius: 0.25rem;
+  position: relative;
+  margin-bottom: 10px;
+  background-color: unset;
+}
+
+.why-Ayunova {
+  margin: 3rem 0;
+}
+
+.why-Ayunova .list {
+  display: flex;
+}
+
+.why-Ayunova .list ul {
+  width: 50%;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.why-Ayunova .list ul li:before {
+  content: " ";
+  background-color: #7ab741;
+  width: 12px;
+  display: inline-block;
+  height: 8px;
+  vertical-align: middle;
+  margin-top: -4px;
+  margin-right: 10px;
+  border-radius: 0 10px 10px 0;
+}
+
+.why-Ayunova .two-part {
+  display: flex;
+  align-items: flex-start;
+}
+
+.why-Ayunova .small-card {
+  display: flex;
+  border: 1px solid #d9d9d9;
+  padding: 10px 10px 10px 14px;
+  margin-top: 10px;
+}
+
+.why-Ayunova .two-part p {
+  padding: 0 10px 0 10px;
+  line-height: 1;
+}
+
+.why-Ayunova .small-card p {
+  margin-left: 12px;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.part-api button,
+.part-surgical button {
+  border: 0;
+  background-color: #176e9e;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.part-api p,
+.part-surgical p {
+  margin-bottom: 0.5rem;
+}
+
+.part-api h3,
+.part-surgical h3 {
+  margin-bottom: 1rem;
+}
+
+.part-api,
+.part-surgical {
+  padding: 32px 16px 32px 16px;
+  text-align: right;
+  background-color: #7ab741;
+  color: white;
+}
+
+.part-surgical {
+  background-color: #176e9e;
+  text-align: left;
+}
+
+.part-surgical button {
+  background-color: #7ab741;
+}
+
+.left-round-area {
+  width: 40%;
+  background-color: #7ab741;
+  border-radius: 100% 0 0 100%;
+  margin-right: -2px;
+}
+
+.right-round-area {
+  width: 40%;
+  background-color: #176e9e;
+  border-radius: 0 100% 100% 0;
+  margin-left: -2px;
+}
+
+.inquiry-section form button {
+  margin-top: 0.6rem;
+  padding: 5px 25px;
+  opacity: 1;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.inquiry-section form {
+  margin-top: 2.5rem;
+}
+
+.inquiry-section {
+  margin: 4rem 0;
+}
+
+.inquiry-section form .input-group {
+  display: inline-block;
+  padding: 8px 10px;
+}
+
+.inquiry-section form .input-group input,
+.inquiry-section form .input-group textarea,
+.inquiry-section form .input-group select {
+  width: 100%;
+  background: transparent;
+  border-color: #3333338a;
+  border-radius: 4px !important;
+}
+
+.inquiry-section form .input-group label {
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+/* pagespeed fix */
+
+.banner .banner-top-right > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 17 / 9;
+  object-fit: cover;
+}
+
+.category {
+  min-height: 138px;
+}
+
+.banner .banner-top-left .certificate-logo {
+  min-height: 118px;
+}
+
+/* 0 to 768px */
+
+@media only screen and (max-width: 576px) {
+  .banner {
+    margin-top: 0;
+    z-index: 0;
+    margin-bottom: -42px;
+    padding: 50px 10px 100px 10px;
+    background-image: url(assets/image/bg-top-sm.webp);
+  }
+
+  .banner .banner-top-left h2 {
+    font-size: xx-large;
+  }
+
+  .banner .banner-top-left .certificate-logo img {
+    width: 50px;
+  }
+
+  .banner .banner-top-left .quot-btn {
+    font-size: 10px;
+    padding: 8px 20px;
+  }
+
+  .home-main-category-card {
+    margin: 5px 5px 5px 0px;
+    width: 78px;
+  }
+
+  #category .item img {
+    height: 46px;
+  }
+
+  #category .item .category-name {
+    min-height: 24px;
+    padding-top: 2px !important;
+    font-size: 8px;
+    margin-top: 0px;
+  }
+
+  #category .item div.image {
+    margin-top: 3px !important;
+  }
+
+  #category .item img {
+    padding: 5px;
+  }
+
+  #category .item .card {
+    border-radius: 0.2rem;
+  }
+
+  .about-content {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .explore-product {
+    padding: 28px 0;
+    background-image: url(assets/image/bg-ptt-sm.webp);
+  }
+
+  .explore-product .product-img a {
+    width: 100%;
+    display: block;
+    max-height: 112px;
+  }
+
+  .explore-product .product-img .view-all-card a {
+    height: 112px;
+    line-height: 124px;
+  }
+
+  .explore-product .product-img .row > .col-4.col-md-2 {
+    margin-top: 12px;
+    padding: 0 5px;
+  }
+
+  .explore-product .product-img {
+    margin-top: 0.75rem;
+  }
+
+  .main-services {
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+
+  .global-presence {
+    padding: 2rem 0;
+  }
+
+  .why-Ayunova {
+    margin: 1.7rem 0;
+  }
+
+  .why-Ayunova .list ul {
+    font-size: 12px;
+    padding-right: 4px;
+  }
+
+  .why-Ayunova .list ul li:before {
+    margin-top: 4px;
+    display: unset;
+    flex: none;
+  }
+
+  .why-Ayunova .list ul li {
+    display: flex;
+  }
+
+  .why-Ayunova .small-card p {
+    font-size: 12px !important;
+  }
+
+  .why-Ayunova .small-card p {
+    font-size: 12px !important;
+  }
+
+  section.inquiry-section {
+    margin: 2rem 0;
+  }
+
+  /* fix area block assin */
+  .banner .banner-top-left .certificate-logo {
+    min-height: 70px;
+  }
+
+  .banner .banner-top-right > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  #category .item img {
+    aspect-ratio: 1 / 0;
+    object-fit: cover;
+  }
+
+  .explore-product .product-img img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .global-presence img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .inquiry-section img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .main-services .service-card .two-part > img {
+    width: 75px;
+    height: 75px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .why-Ayunova .two-part > img {
+    width: 35px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .why-Ayunova .small-card > img {
+    width: 47px;
+    height: 47px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .mobile-header-logo {
+    width: auto;
+    height: 40px;
+    aspect-ratio: 4 / 1;
+    object-fit: cover;
+  }
+
+  .img-foot {
+    height: auto;
+    aspect-ratio: 7/2;
+    object-fit: cover;
+  }
+
+  footer .footer-widget img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}
+
+/* 577px to 768px */
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .banner {
+    margin-top: 0;
+  }
+}
+
+/* 768px to 1200px */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  #navbar {
+    margin: 0 10px;
+  }
+}
+
+.select-country-code .select-box .selected-option div::after {
+  top: 35%;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.select-country-code .select-box .selected-option {
+  overflow: visible;
+  background-color: unset;
+  border: 1px solid;
+  border-color: #3333338a;
+  border-radius: 4px !important;
+}
+
+.select-country-code .select-box .selected-option div::after {
+  right: 0.4rem;
+}
+
+.select-country-code .select-box .selected-option div.code-box strong {
+  margin-left: 2px;
+}
+
+.select-country-code .select-box .selected-option div.code-box svg {
+  margin-top: 2px;
+}
+
+.select-country-code .select-box .selected-option div.code-box {
+  width: auto;
+  padding: 0 1.3rem 0 0.5rem;
+  display: flex;
+}
+
+.select-country-code .select-box .selected-option strong {
+  font-size: 1rem;
+}
+
+form .input-group.select-country-code .select-box input {
+  font-size: 1rem;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  border: 0;
+  border-left: 1px solid;
+  border-radius: 0 !important;
+}
+
+form
+  .input-group.select-country-code
+  .select-box
+  input.search-box::placeholder {
+  color: #333333;
+}
+
+form .input-group.select-country-code .select-box input.search-box {
+  color: #333333;
+  border: 0;
+}
+
+.select-country-code .select-box {
+  width: auto;
+  margin: auto;
+}
+
+.select-country-code .select-box .options.active {
+  z-index: 3;
+  border: 1px solid #3333338a;
+}
+
+.select-country-code .select-box .options ol {
+  padding-left: 0;
+}
+
+.country-home-link a {
+  color: #7ab741;
+}
+
+.country-home-link a:hover {
+  color: white;
+}
+
+/* new common */
+
+.poppins {
+  font-family: "Poppins", serif;
+}
+
+.text-green {
+  color: #7ab741 !important;
+}
+
+.text-blue {
+  color: #176e9e !important;
+}
+
+.bg-blue {
+  background-color: #176e9e !important;
+}
+
+.bg-green {
+  background-color: #7ab741 !important;
+}
+
+.fs-10 {
+  font-size: 10px !important;
+}
+
+.fs-11 {
+  font-size: 11px !important;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+.first-tag {
+  margin-top: -24px;
+}
+
+.breadcrumbs.first-tag {
+  background: rgba(210, 210, 210, 0.2);
+  padding-top: calc(1rem + 25px) !important;
+}
+
+.breadcrumbs .breadcrumb-item:not(.active) > a {
+  color: black;
+}
+
+.breadcrumbs .breadcrumb-item:not(.active) > a > i {
+  display: none;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  font-weight: 900;
+  font-family: monospace;
+}
+
+label.required:after {
+  content: "*";
+  color: red;
+}
+
+/* new header */
+
+.translate_language {
+  background: white;
+  margin-top: -1px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.translate_language span.bd-round-left {
+  width: 8px;
+  background: #176e9e;
+  border-radius: 0 0 8px 0;
+}
+
+.translate_language span.bd-round-right {
+  width: 8px;
+  background: #176e9e;
+  border-radius: 0 0 0 8px;
+  margin-right: -1px;
+}
+
+.translate_language a > img.flag {
+  border-radius: 4px;
+  padding-top: 2px;
+}
+
+.skiptranslate[style=""] + header {
+  margin-top: 39px;
+}
+
+img.l-logo {
+  max-width: 250px;
+}
+
+.md-header-contact a {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.md-header-contact a.mail {
+  background-color: #176e9e;
+  margin-left: 15px;
+}
+
+.md-header-contact a.phone {
+  background-color: #7ab741;
+}
+
+form.search-lg-form {
+  display: flex;
+}
+
+.search-lg-form button.submit {
+  outline: 0;
+  border: 0;
+  background-color: #176e9e;
+  color: white;
+  line-height: 1;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+.search-lg-form .search-box::placeholder {
+  color: darkgray;
+  opacity: 1;
+  /* Firefox */
+}
+
+.search-lg-form .search-box::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: darkgray;
+}
+
+.search-lg-form .search-box {
+  line-height: 1;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid darkgray;
+  border-radius: 0;
+  margin-right: -5px;
+  font-size: 14px;
+  background: transparent;
+}
+
+#navbar:not(.sticky) {
+  position: relative;
+}
+
+#navbar {
+  background: #7ab741;
+  margin: 0 220px;
+  padding: 14px 0;
+  border-radius: 7px;
+}
+
+.button-nav {
+  outline: unset;
+  border: none;
+  background-color: #176e9e;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 4px 8px;
+}
+
+#upcoming-event-link img {
+  max-width: 100px;
+  margin-left: 5.5rem;
+}
+
+.mobile-header-logo {
+  height: 40px;
+}
+
+.lg-lang a,
+.sm-lang a {
+  background-image: url("https://Ayunovapharma.com/assets/img/icons/32.webp");
+  background-position: 0px -4px;
+}
+
+.lg-lang .flag {
+  background-position: -0px -0px;
+  width: 36px;
+  height: auto;
+  /* height 35 */
+}
+
+.sm-lang a > img {
+  width: 40px;
+  height: auto;
+  /*height="25" */
+}
+
+a.gflag {
+  vertical-align: middle;
+  font-size: 18px;
+  padding: 1px 0px;
+  background-repeat: no-repeat;
+}
+
+#navbar_responsive .multi_language_box {
+  width: 250px;
+}
+
+/* new footer */
+
+.footer-link {
+  font-weight: 400;
+}
+
+/* inner search input for product search in Category/brand/integrity */
+
+.title-category .search-input {
+  background-color: transparent;
+  border: 0.5px solid #a9a9a9;
+  outline: 0;
+  border-radius: 16px;
+  line-height: 2;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.category-heading {
+  margin-top: -90px;
+  padding-top: 90px;
+}
+
+.category-heading.first-visible {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+a#showMore {
+  line-height: 2.5;
+  padding-left: 18px;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+/* main category card set */
+/* responsive */
+/* 0 to 768px */
+
+@media only screen and (max-width: 576px) {
+  img.img-foot {
+    width: 60%;
+  }
+
+  .m-head {
+    height: 1.6rem;
+  }
+
+  .m-head a {
+    padding-top: 1rem;
+    padding-bottom: 0.22rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+  }
+
+  #top_button,
+  .m-head a:first-child,
+  .wp_sticky {
+    /*padding-bottom: 0.34rem;*/
+    right: 4px;
+    bottom: 4px;
+    left: unset;
+  }
+
+  .dk-footer-box-info a.footer-logo.justify-content-center {
+    justify-content: left !important;
+  }
+
+  .footer-info-text {
+    margin: 12px 0;
+  }
+
+  .first-tag {
+    margin-top: 0px;
+  }
+
+  .breadcrumbs.first-tag {
+    padding-top: 0.5rem !important;
+  }
+
+  .navigation-button {
+    padding: 0;
+    text-align: right;
+    overflow: hidden;
+  }
+
+  #navbar_responsive .multi_language_box {
+    background-color: white;
+  }
+
+  ul.nav_responsive {
+    padding-bottom: 4rem;
+  }
+
+  ol.breadcrumb {
+    font-size: 0.5rem;
+  }
+
+  .breadcrumbs {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  #accordionExample button.accordion-button,
+  #accordionExample .accordion-body ul > li {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.65rem !important;
+  }
+
+  #accordionExample button.accordion-button::after {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-size: 0.75rem;
+  }
+
+  #upcoming-event-link img {
+    max-width: 75px;
+    margin-left: 1.5rem;
+  }
+
+  .category-box-name {
+    font-size: 12px !important;
+    padding-top: 2px;
+    line-height: 1;
+  }
+
+  .category-box {
+    padding-right: 0.25rem !important;
+    padding-left: 0.25rem !important;
+  }
+
+  .category-box .card {
+    height: 80px !important;
+  }
+}
+
+.category-box {
+  margin-top: 1rem !important;
+}
+
+.category-box .card {
+  height: 86px;
+  line-height: 1;
+}
+
+/* 0px to 320px */
+
+@media only screen and (max-width: 320px) {
+  #upcoming-event-link img {
+    max-width: 50px;
+    margin-left: 1rem;
+  }
+}
+
+/* 577px to 768px */
+
+@media (min-width: 577px) and (max-width: 768px) {
+  #upcoming-event-link img {
+    max-width: 80px;
+    margin-left: 4rem;
+  }
+}
+
+/* 768px to 1200px */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  #navbar {
+    margin: 0 10px;
+  }
+
+  #upcoming-event-link img {
+    max-width: 80px;
+    margin-left: 4rem;
+  }
+
+  .first-tag {
+    margin-top: 0px;
+  }
+}
+
+/* 1200px to 1600px */
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+  #navbar {
+    margin: 0 20px;
+  }
+}
+
+.button-nav {
+  cursor: pointer !important;
+  z-index: 9999;
+  position: relative;
+}
+
+.navigation-backdrop {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9998;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.ios,
+.ios * {
+  cursor: pointer;
+}
+
+.captcha-box {
+  background: url("https://Ayunovapharma.com/assets/img/icons/bright-squares.png")
+    no-repeat center center;
+  background-size: cover;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.captcha-box .captcha-text {
+  font-size: 22px;
+  letter-spacing: 4px;
+  user-select: none;
+}
+
+.captcha-box .bold {
+  font-weight: bold;
+}
+
+.captcha-box .italic {
+  font-style: italic;
+}
+
+.captcha-box .bold-italic {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.captcha-box .normal {
+  font-weight: normal;
+  font-style: normal;
+}
