@@ -53,7 +53,7 @@
 }
 
 #category .item .card {
-  background: linear-gradient(141deg, #7ab741 0%, #2c86b8 160%);
+  background: linear-gradient(141deg, #55C4EB 0%, #2c86b8 160%);
   border: 0;
   border-radius: 0.6rem;
 }
@@ -151,7 +151,7 @@
 }
 
 .service-card .two-part img {
-  background-color: #7ab741;
+  background-color: #55C4EB;
   border-radius: 0;
   padding: 8px;
   margin-right: 20px;
@@ -223,7 +223,7 @@
 
 .why-Ayunova .list ul li:before {
   content: " ";
-  background-color: #7ab741;
+  background-color: #55C4EB;
   width: 12px;
   display: inline-block;
   height: 8px;
@@ -281,7 +281,7 @@
 .part-surgical {
   padding: 32px 16px 32px 16px;
   text-align: right;
-  background-color: #7ab741;
+  background-color: #55C4EB;
   color: white;
 }
 
@@ -291,12 +291,12 @@
 }
 
 .part-surgical button {
-  background-color: #7ab741;
+  background-color: #55C4EB;
 }
 
 .left-round-area {
   width: 40%;
-  background-color: #7ab741;
+  background-color: #55C4EB;
   border-radius: 100% 0 0 100%;
   margin-right: -2px;
 }
@@ -651,7 +651,7 @@ form .input-group.select-country-code .select-box input.search-box {
 }
 
 .country-home-link a {
-  color: #7ab741;
+  color: #55C4EB;
 }
 
 .country-home-link a:hover {
@@ -665,7 +665,7 @@ form .input-group.select-country-code .select-box input.search-box {
 }
 
 .text-green {
-  color: #7ab741 !important;
+  color: #55C4EB !important;
 }
 
 .text-blue {
@@ -677,7 +677,7 @@ form .input-group.select-country-code .select-box input.search-box {
 }
 
 .bg-green {
-  background-color: #7ab741 !important;
+  background-color: #55C4EB !important;
 }
 
 .fs-10 {
@@ -776,7 +776,7 @@ img.l-logo {
 }
 
 .md-header-contact a.phone {
-  background-color: #7ab741;
+  background-color: #55C4EB;
 }
 
 form.search-lg-form {
@@ -821,7 +821,7 @@ form.search-lg-form {
 }
 
 #navbar {
-  background: #7ab741;
+  background: #55C4EB;
   margin: 0 220px;
   padding: 14px 0;
   border-radius: 7px;
