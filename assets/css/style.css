@@ -667,7 +667,7 @@ footer {
 .blog_card:hover {
     border-width: 3px;
     border-style: solid;
-    background: radial-gradient(circle,#80b638 22%,#5dba6b 58%,#51bb7a 100%);
+    background: radial-gradient(circle,#388cb6 22%,#5dbab8 58%,#51bb7a 100%);
     overflow: hidden;
     padding: 0
 }
@@ -2061,7 +2061,7 @@ img {
 
     .dk-footer {
         padding: 12px 0 0;
-        background-color: #151414;
+        background-color: #3f3f3f;
         position: relative;
         z-index: 2
     }
@@ -2226,7 +2226,7 @@ img {
 
     .dk-footer {
         padding: 12px 0 0;
-        background-color: #151414;
+        background-color: #3f3f3f;
         position: relative;
         z-index: 2
     }
@@ -2352,7 +2352,7 @@ img {
 
     .dk-footer {
         padding: 35px 0 0;
-        background-color: #151414;
+        background-color: #3f3f3f;
         position: relative;
         z-index: 2
     }
