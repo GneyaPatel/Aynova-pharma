@@ -420,7 +420,7 @@
 
   .explore-product {
     padding: 28px 0;
-    background-image: url(assets/image/bg-ptt-sm.webp);
+    background-image: url(/assets/images/common/bg-ptt.webp);
   }
 
   .explore-product .product-img a {
