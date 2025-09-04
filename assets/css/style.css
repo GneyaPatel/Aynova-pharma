@@ -1166,8 +1166,8 @@ footer p {
     padding: 12px 24px 12px 17px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    border: 2px solid #18ba60;
-    background: #18ba60;
+    border: 2px solid #16aeb6;
+    background: #18b2ba;
     color: #fff
 }
 
@@ -1337,7 +1337,7 @@ footer p {
 }
 
 .fix-dv button {
-    background: #7ecd02;
+    background: #02cdcd;
     padding: 5px;
     color: #fff;
     font-size: 12px;
@@ -1395,8 +1395,8 @@ footer p {
 }
 
 .category_index .card,.category_response .card {
-    background: #80b638;
-    background: linear-gradient(90deg,#80b638 22%,#5dba6b 58%,#51bb7a 100%)
+    background: #03fbff;
+    background: linear-gradient(90deg,#38b6b4 22%,#5da6ba 58%,#51b2bb 100%)
 }
 
 .round-label {
@@ -1574,9 +1574,9 @@ audio,canvas,progress,video {
 }
 
 .btn-green-bord:hover {
-    border: 2px solid #019700;
+    border: 2px solid #008a97;
     background: #fff;
-    color: #019700
+    color: #00978d
 }
 
 div.highway-slider {
@@ -1697,7 +1697,7 @@ div#bott-om {
 }
 
 .red {
-    color: #7ecd02
+    color: #02cdb5
 }
 
 article.content-right-margin-20.light-bg-2.animated {
@@ -1860,7 +1860,7 @@ article.content-right-margin-20.light-bg-2.animated {
     font-size: 21px;
     color: #333;
     padding-left: 10px;
-    border-left: 5px solid #7ecd02;
+    border-left: 5px solid #02b2cd;
     font-weight: 500;
     margin-bottom: 10px
 }
@@ -2085,7 +2085,7 @@ img {
     }
 
     .form-parent {
-        background: linear-gradient(90deg,#80b638 22%,#5dba6b 58%,#51bb7a 100%);
+        background: linear-gradient(90deg,#38b6a7 22%,#5d98ba 58%,#51b7bb 100%);
         padding: 15px;
         border-radius: 10px;
         margin: 10px 0
@@ -2248,7 +2248,7 @@ img {
     }
 
     .form-parent {
-        background: linear-gradient(90deg,#80b638 22%,#5dba6b 58%,#51bb7a 100%);
+        background: linear-gradient(90deg,#38b6a7 22%,#5d9bba 58%,#51bb7a 100%);
         padding: 15px;
         border-radius: 10px;
         margin: 10px 0
