@@ -326,7 +326,7 @@ div#bg-gray {
   background-color: #222;
   z-index: 99999999;
   transition: 0.3s ease-in-out;
-  border: 2px solid #019700;
+  border: 2px solid #008d97;
 }
 #mainnav ul.submenu li:first-child {
   border-top: none;
@@ -459,7 +459,7 @@ ul#submenue2 {
 }
 #top_button:active,
 #top_button:hover {
-  background-color: #80cf35d9;
+  background-color: #35cccfd9;
 }
 #customers-testimonials .item-details h5 {
   margin: 0 0 15px;
