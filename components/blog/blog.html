@@ -43,8 +43,7 @@
     <link rel="stylesheet" id="astra-theme-css-css" href="/assets/css/main.min.css?ver=4.11.0" media="all">
 
     <link rel="stylesheet" id="astra-google-fonts-css"
-        href="/assets/fonts/fontgoogleapi3.css?family=Instrument+Sans%3A400%2C%7CInter%3A500%2C400&amp;display=fallback&amp;ver=4.11.0"
-        media="all">
+        href="/assets/fonts/fontgoogleapi3.css?family=Instrument+Sans%3A400%2C%7CInter%3A500%2C400&amp;display=fallback&amp;ver=4.11.0" media="all">
     <link rel="stylesheet" id="hfe-widgets-style-css" href="/assets/css/frontend.css?ver=2.4.8" media="all">
 
     <link rel="stylesheet" id="wp-block-library-css" href="/assets/css/style.min.css?ver=6.7.3" media="all">
@@ -98,9 +97,7 @@
     <link rel="stylesheet" href="/assets/css/bootstrap_main.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <!-- Link to Google Fonts (after preloading) -->
-    <link
-        href="/assets/fonts/fontgoogleapi1.css?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        as="style">
+    <link href="/assets/fonts/fontgoogleapi1.css?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" as="style">
     <!-- Bootstrap CSS (this will now be loaded asynchronously) -->
     <link href="/assets/css/bootstap_main.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -144,9 +141,8 @@
                     bar.css('width', p + '%')
                 });
             });
-        }(jQuery);
-    </script>
-    <script id="jquery-js-after">
+        }(jQuery); 
+
         ! function ($) {
             "use strict";
             $(document).ready(function () {
@@ -159,19 +155,6 @@
                     return !1
                 })
             })
-        }(jQuery);
-        ! function ($) {
-            'use strict';
-            $(document).ready(function () {
-                var bar = $('.hfe-reading-progress-bar');
-                if (!bar.length) return;
-                $(window).on('scroll', function () {
-                    var s = $(window).scrollTop(),
-                        d = $(document).height() - $(window).height(),
-                        p = d ? s / d * 100 : 0;
-                    bar.css('width', p + '%')
-                });
-            });
         }(jQuery);
     </script>
 </head>
@@ -203,23 +186,21 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-sm-6 col-md-5 col-xxl-4 float-lg-end d-none d-lg-block">
+                    <!-- <div class="col-12 col-sm-6 col-md-5 col-xxl-4 float-lg-end d-none d-lg-block">
                         <div class="translate_language">
                             <span class="bd-round-left"> </span>
                             <div class="multi_language_box lg-lang mt-1">
                                 <span class="text-body me-2 mt-1">Translated into: </span>
-                                <a href="#" onclick="doGTranslate('en|en');return false;" title="English"
-                                    class="gflag nturl">
+                                <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl">
                                     <img src="/assets/icons/blank.webp" class="flag" alt="English" /></a>
                                 <a href="#" onclick="doGTranslate('en|es');return false;" title="Spanish"
                                     class="gflag nturl" style="background-position:-600px -204px;">
                                     <img src="/assets/icons/blank.webp" class="flag" alt="Spanish" /></a>
-                                <a href="#" onclick="doGTranslate('en|pt');return false;" title="Portuguese"
-                                    class="gflag nturl" style="background-position:-300px -204px;"><img
+                                <a href="#" onclick="doGTranslate('en|pt');return false;" title="Portuguese" class="gflag nturl" style="background-position:-300px -204px;"><img
                                         src="/assets/icons/blank.webp" class="flag" alt="Portuguese" /></a>
                                 <a href="#" onclick="doGTranslate('en|fr');return false;" title="French"
-                                    class="gflag nturl" style="background-position:-200px -104px;"><img
-                                        src="/assets/icons/blank.webp" class="flag" alt="French"></a>
+                                    class="gflag nturl" style="background-position:-200px -104px;">
+                                    <img src="/assets/icons/blank.webp" class="flag" alt="French" /></a>
                                 <div id="google_translate_element2"></div>
                                 <script type="text/javascript">
                                     if ($(window).width() >= 992) {
@@ -250,7 +231,7 @@
                             </div>
                             <span class="bd-round-right"> </span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -258,7 +239,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-7 d-flex align-items-center">
-                        <a href="/index.html"><img src="/assets/images/common/ayunova final logo.png" alt="Logo"
+                        <a href="index.html"><img src="/assets/images/common/ayunova final logo.png" alt="Logo"
                                 class="l-logo"></a>
                         <!-- <a href="upcoming-events.html" id="upcoming-event-link"><img
                                 src="/Webdesigning/Ayunovapharma.com/assets/image/VISIT_US_AT__2_-removebg-preview.png"
@@ -269,15 +250,13 @@
                             <div class="col-12">
                                 <div class="d-flex justify-content-end md-header-contact me-3">
                                     <a href="tel:+917984303039"
-                                        class="text-light me-2 d-none d-sm-none d-md-none d-lg-block phone">
-                                        <i class="fa-solid fa-phone-volume"></i>
-                                        <span class="ms-1"><strong>+91 9998789409 +91 9016842661</strong></span>
-                                    </a>
+                                        class="text-light me-2 d-none d-sm-none d-md-none d-lg-block phone"><i
+                                            class="fa-solid fa-phone-volume"></i> <span class="ms-1"><strong>+91
+                                                9998789409 +91 9016842661</strong></span></a>
                                     <a href="mailto:inquiry@Ayunovapharma.com"
-                                        class="text-light me-2 d-none d-sm-none d-md-block d-lg-block mail">
-                                        <i class="fa-solid fa-envelope me-1"></i>
-                                        <span class=""><strong>ayunovapharmaceutical@gmail.com</strong></span>
-                                    </a>
+                                        class="text-light me-2 d-none d-sm-none d-md-block d-lg-block mail"><i
+                                            class="fa-solid fa-envelope me-1"></i><span
+                                            class=""><strong>ayunovapharmaceutical@gmail.com</strong></span></a>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -287,6 +266,7 @@
                                         aria-label="Search">
                                     <button class="submit" type="submit">Search</button>
                                 </form>
+
                             </div>
                         </div>
                     </div>
@@ -307,9 +287,8 @@
                                         <li><a href="/components/companyprofile/aboutus.html">About US</a></li>
                                         <li><a href="/components/companyprofile/quality-policy.html">Quality Policy</a>
                                         </li>
-                                        <li><a
-                                                href="/components/companyprofile/client-satisfaction.html">ClientSatisfaction</a>
-                                        </li>
+                                        <li><a href="/components/companyprofile/client-satisfaction.html">Client
+                                                Satisfaction</a></li>
                                         <li><a href="/components/companyprofile/faq.html">Frequently Asked Question</a>
                                         </li>
                                     </ul>
