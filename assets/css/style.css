@@ -64,7 +64,7 @@ body {
 }
 
 .nav-center a {
-    color: #7ab741;
+    color: #55C4EB;
     text-decoration: none!important
 }
 
@@ -785,7 +785,7 @@ form .hs-button,form input[type=submit] {
     bottom: 0;
     width: 400px;
     padding: 25px 15px;
-    background: #7ab741;
+    background: #55C4EB;
     color: #fff;
     transition: .5s ease-in-out
 }
@@ -807,7 +807,7 @@ form .hs-button,form input[type=submit] {
 .timeline ul li:nth-child(odd) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #7ab741 transparent transparent
+    border-color: transparent #55C4EB transparent transparent
 }
 
 .timeline ul li:nth-child(2n) div {
@@ -818,7 +818,7 @@ form .hs-button,form input[type=submit] {
 .timeline ul li:nth-child(2n) div::before {
     right: -15px;
     border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent #7ab741
+    border-color: transparent transparent transparent #55C4EB
 }
 
 time {
@@ -1031,7 +1031,7 @@ footer p {
 }
 
 .dk-footer-box-info .footer-social-link h3 {
-    color: #7ab741;
+    color: #55C4EB;
     font-size: 24px;
     margin-bottom: 16px
 }
@@ -1211,7 +1211,7 @@ footer p {
 .copyright {
     padding: 12px 0;
     margin-top: 55px;
-    background-color: #7ab741;
+    background-color: #55C4EB;
     text-align: center
 }
 
@@ -1278,7 +1278,7 @@ footer p {
 }
 
 #top_button,.m-head a:first-child,.wp_sticky {
-    background-color: #7ab741
+    background-color: #55C4EB
 }
 
 .category ul li.active a,footer .form-control {
@@ -1352,7 +1352,7 @@ footer p {
 }
 
 .b-green {
-    background-color: #7ab741!important;
+    background-color: #55C4EB!important;
     color: #fff
 }
 
@@ -1816,8 +1816,8 @@ article.content-right-margin-20.light-bg-2.animated {
 }
 
 .category ul li.active {
-    background: #7ab741;
-    border-right: 8px solid #7ab741;
+    background: #55C4EB;
+    border-right: 8px solid #55C4EB;
     color: #fff
 }
 
@@ -1839,7 +1839,7 @@ article.content-right-margin-20.light-bg-2.animated {
 }
 
 .text-green {
-    color: #7ab741
+    color: #55C4EB
 }
 
 .text-blue {
@@ -1888,7 +1888,7 @@ img {
 }
 
 .outer-circle {
-    background-image: linear-gradient(#156d9c,#7ab741,#d1d1d1);
+    background-image: linear-gradient(#156d9c,#55C4EB,#d1d1d1);
     width: 130px;
     height: 130px;
     border-radius: 50%;
