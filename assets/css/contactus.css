@@ -484,3 +484,79 @@ html {
   font-weight: normal;
   font-style: normal;
 }
+
+/* Section background */
+/* Cylindrical Section */
+.contact-center.cylindrical {
+  background: #6ec5f4; /* Light blue */
+  padding: 60px 40px;
+  border-radius: 100px;   /* Creates pill / cylinder shape */
+  max-width: 1200px;
+  margin: 50px auto;      /* Center the section */
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+}
+
+/* Contact cards */
+.contact-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Links */
+.contact-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #4b32b0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #2c86b8;
+}
+/* Contact cards */
+.contact-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Titles */
+.contact-card h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Links */
+.contact-link {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 18px;
+  color: #4b32b0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #2c86b8;
+}
