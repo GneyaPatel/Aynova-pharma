@@ -1,5 +1,6 @@
 .banner {
-  background-image: url(/assets/images/common/bg-top.webp);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.545), rgb(255, 255, 255)), /* transparent overlay */
+   url(/assets/images/common/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 10px 150px 10px;
@@ -27,19 +28,6 @@
   cursor: pointer;
 }
 
-.banner-top-left button.quot-btn {
-  background: #176e9e;
-  outline: 0;
-  border: 0;
-  color: white;
-  border-radius: 0.5rem;
-  padding: 16px 24px;
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 16px;
-}
-
 .banner-top-right {
   margin-top: 18px;
 }
@@ -53,11 +41,18 @@
 }
 
 #category .item .card {
-  background: linear-gradient(141deg, #55c4eb 0%, #2c86b8 160%);
-  border: 0;
-  border-radius: 0.6rem;
+  background: linear-gradient(141deg, #aed8e9 0%, #176e9e 160%);
+  border: 150px;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;    
 }
-
+.home-main-category-card .card:hover {
+    transform: scale(1.05);      /* Small hover effect */
+}
 .home-main-category-card {
   margin: 5px 12px 12px 0px;
   width: 120px;
@@ -89,6 +84,32 @@
   font-style: italic;
   font-size: 16px;
 }
+
+.about-content {
+    position: relative;
+    padding: 50px 0;
+}
+
+.about-box {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    color: #fff; /* text visible on gradient */
+    text-align: justify;
+}
+
+.about-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;  /* 3/4 width */
+    height: 100%;
+    background: linear-gradient(135deg, #17619e, #176e9e); /* Blue → Green gradient */
+    border-radius: 12px;
+    z-index: -1; /* keep behind content */
+}
+
 
 .explore-product {
   background-image: url(assets/image/bg-ptt.webp);
@@ -131,6 +152,36 @@
   margin-left: 10px;
   margin-top: 6px;
   border-radius: 14px;
+}
+
+.accordion-button {
+  background-color: #fff;   /* keep white background */
+  color: #55c4eb;          /* blue text */
+  font-weight: 600;
+  border: 1px solid #55c4eb;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f0faff;  /* very light blue background when opened */
+  color: #55c4eb;
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  filter: invert(47%) sepia(97%) saturate(480%) hue-rotate(161deg) brightness(94%) contrast(92%);
+  /* makes the arrow icon also #55c4eb */
+}
+
+.accordion-item {
+  border: 1px solid #55c4eb;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-body {
+  background: #fff;
+  color: #333;  /* normal black text */
 }
 
 .main-services {
@@ -207,7 +258,7 @@
   background-color: unset;
 }
 
-.why-Ayunova {
+/* .why-Ayunova {
   margin: 3rem 0;
 }
 
@@ -306,7 +357,96 @@
   background-color: #176e9e;
   border-radius: 0 100% 100% 0;
   margin-left: -2px;
+} */
+
+.why-section {
+  padding: 50px 0;
 }
+
+.cylinder-box {
+  background: #2c8ecf;
+  border-radius: 80px;
+  padding: 40px;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cylinder-box ul {
+  list-style-type: disc;   /* show bullets */
+  padding-left: 20px; /* space for bullets */
+  margin-bottom: 20px;
+}
+
+.cylinder-box ul li {
+  font-size: 16px;
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.left-box {
+  background: #4cb8f4;
+}
+
+.right-box {
+  background: #1d6e99;
+}
+
+.cylinder-box h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cylinder-box ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.cylinder-box ul li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.two-part {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.two-part img {
+  width: 40px;
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.small-card {
+  background: #fff;
+  color: #1d6e99;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.small-card:hover {
+  transform: translateY(-5px);
+}
+
+.small-card img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
 
 .inquiry-section form button {
   margin-top: 0.6rem;
@@ -319,6 +459,13 @@
 
 .inquiry-section form {
   margin-top: 2.5rem;
+  border: #000;   /* black border */
+  border-radius: 8px;       /* rounded corners */
+  padding: 20px;            /* space inside */
+  max-width: 500px;         /* optional: form width */
+  margin: 20px auto;        /* center align */
+  background: #fff;         /* white background */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* soft shadow */
 }
 
 .inquiry-section {
