@@ -1494,29 +1494,29 @@
             jQuery(document).ready(function ($) {
                 "use strict";
                 $('.blogs').owlCarousel({
-                    items: 3,
-                    loop: false,
-                    margin: 18,
-                    merge: true,
-                    dots: false,
-                    nav: false,
+                    items: 3,        // Default: show 3 items at a time
+                    loop: false,     // Do NOT loop back to start after last slide
+                    margin: 18,      // 18px margin between items
+                    merge: true,     // Allows merging items with 'data-merge' attribute
+                    dots: false,     // Hide pagination dots by default
+                    nav: false,      // Hide prev/next arrows by default
                     responsive: {
-                        0: {
-                            items: 1,
-                            nav: false,
-                            dots: true,
-                        },
-                        577: {
-                            items: 2,
-                            margin: 10,
-                            nav: false,
-                            dots: true
-                        },
-                        768: {
-                            items: 2
-                        },
-                        1170: {
-                            items: 3
+                    0: { // Screen width 0px - 576px
+                        items: 1,      // Show 1 item
+                        nav: false,    // No arrows
+                        dots: true     // Show dots
+                    },
+                    577: { // Screen width 577px - 767px
+                        items: 2,      // Show 2 items
+                        margin: 10,    // Smaller gap between items
+                        nav: false,    // No arrows
+                        dots: true     // Show dots
+                    },
+                    768: { // Screen width 768px - 1169px
+                        items: 2       // Show 2 items
+                    },
+                    1170: { // Screen width 1170px and above
+                        items: 3       // Show 3 items
                         }
                     }
                 });
