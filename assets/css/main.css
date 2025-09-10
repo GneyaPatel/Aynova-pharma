@@ -1,5 +1,5 @@
 .banner {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.545), rgb(222, 232, 219)), /* transparent overlay */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.545), rgb(209, 204, 204)), /* transparent overlay */
    url(/assets/images/common/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
