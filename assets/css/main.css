@@ -1,26 +1,3 @@
-.email-link {
-  display: flex;
-  align-items: center;  /* center icon + text */
-  background: #1573a8;  /* blue background */
-  padding: 10px 15px;
-  border-radius: 6px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  width: fit-content;
-}
-
-.email-link i {
-  margin-right: 8px; /* space between icon & text */
-}
-
-.email-link:hover {
-  background: #0e5b85; /* darker blue on hover */
-  color: #fff;
-}
-
-
 .banner {
   background-image: linear-gradient(rgba(255, 255, 255, 0.545), rgb(255, 255, 255)), /* transparent overlay */
    url(/assets/images/common/bg.jpg);
@@ -980,6 +957,7 @@ img.l-logo {
 .md-header-contact a.mail {
   background-color: #176e9e;
   margin-left: 15px;
+  padding-right: 15px;
 }
 
 .md-header-contact a.phone {
