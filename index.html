@@ -1336,7 +1336,11 @@
         <!-- copyright Container -->
         <div class="copyright">
             <div class="container">
-                <p>Copyright © 2023, All Right Reserved Ayunova</p>
+                <p>&copy; <span id="year"></span> , All Rights Reserved by Ayunova Pharmaceutical.</p>
+                <script>
+                    // Auto insert current year
+                    document.getElementById("year").textContent = new Date().getFullYear();
+                </script>
             </div>
         </div>
     </footer>
