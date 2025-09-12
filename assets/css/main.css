@@ -195,7 +195,6 @@
   background-color: #fff;   /* keep white background */
   color: #55c4eb;          /* blue text */
   font-weight: 600;
-  border: 1px solid #55c4eb;
 }
 
 .accordion-button:not(.collapsed) {
