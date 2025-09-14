@@ -55,7 +55,7 @@
 /* Category Section */
 .category {
   padding: 40px 20px;
-  background: #f9f9f9;
+  background: #b3b2b2;
 }
 
 .category .container {
@@ -65,14 +65,11 @@
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 per row */
-  gap: 20px; /* space between cards */
+  grid-template-columns: repeat(6, 1fr); /* 6 per row */
+  gap: 0; /* remove gap between cards */
 }
 
 .category-card {
-  background: #55c4eb;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
   overflow: hidden;
@@ -81,6 +78,7 @@
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  background-color: #3375aa;
 }
 
 .category-card a {
@@ -963,6 +961,7 @@ a.gflag {
 }
 
 /* inner search input for product search in Category/brand/integrity */
+
 
 .title-category .search-input {
   background-color: transparent;
