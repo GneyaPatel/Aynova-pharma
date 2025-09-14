@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.svg">
 
     <meta name="description"
-        content="Welox pharma has grown steadily throughout the years, allowing us to achieve global prominence in the pharmaceutical industry.">
+        content="Ayunova pharma has grown steadily throughout the years, allowing us to achieve global prominence in the pharmaceutical industry.">
     <meta name="keywords" content="">
 
     <meta property="og:title" content="Ayunova pharmaceutical" />
@@ -130,7 +130,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-7 col-xxl-8 d-flex align-items-center d-none d-lg-block">
-                        <p class="mb-0 pt-1">Welcome To Ayunova Pharma</p>
+                        <p class="mb-0 pt-1">Welcome To Ayunova Pharma...</p>
                     </div>
                     <div class="col-12 d-block d-lg-none ps-0 pe-0">
                         <div class="m-head">
@@ -202,7 +202,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex justify-content-end md-header-contact me-3">
-                                    <a href="tel:+917984303039"
+                                    <a href="tel:+919998789409"
                                         class="text-light me-2 d-none d-sm-none d-md-none d-lg-block phone"><i
                                             class="fa-solid fa-phone-volume"></i> <span class="ms-1"><strong>+91
                                                 9998789409</strong></span></a>
@@ -255,8 +255,8 @@
                                         <li><a href="/components/infrastructure/research-and-devlopment.html">R & D</a>
                                         </li>
                                     </ul>
-                                </li>
-                                <li> <a href="/components/product/product.html">Product</a> </li>
+                                <li> <a href="/components/product/product.html">Product</a> </li></li>
+                                
                                 <li><a href="#">Services</a>
                                     <ul class="submenu">
                                         <li><a href="/components/services/contract-manufacturing.html">Contract
@@ -1395,11 +1395,7 @@
             // timeline history
             (function () {
                 "use strict";
-                // define variables
                 var items = document.querySelectorAll(".timeline li");
-
-                // check if an element is in viewport
-                // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
                 function isElementInViewport(el) {
                     var rect = el.getBoundingClientRect();
                     return (
@@ -1470,15 +1466,11 @@
                         nav: false,
                         smartSpeed: 200,
                         slideSpeed: 500,
-                        slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+                        slideBy: slidesPerPage, 
                         responsiveRefreshRate: 100
                     }).on('changed.owl.carousel', syncPosition2);
 
                 function syncPosition(el) {
-                    //if you set loop to false, you have to restore this next line
-                    //var current = el.item.index;
-
-                    //if you disable loop you have to comment this block
                     var count = el.item.count - 1;
                     var current = Math.round(el.item.index - (el.item.count / 2) - .5);
 
@@ -1540,7 +1532,7 @@
                     // console.log("hello")
                     $.ajax({
                         type: "POST",
-                        url: "https://weloxpharma.com/search",
+                        url: "http://127.0.0.1:52632/components/product/product.html",
                         data: {
                             keyword: $(this).val(),
                             _token: '2dVjMZqDPRM7zeCXvkPhueC9L9jRlNtV641nP7Vp'
@@ -1660,8 +1652,6 @@
                     navbarResponsive.classList.remove("sticky");
                 }
             }
-            // $( document ).on( "touchstart", ".button-nav, .navigation-backdrop", nvBackdrop);
-            // $( document ).on( "click", ".button-nav, .navigation-backdrop",nvBackdrop);
             document.querySelectorAll(".button-nav").forEach(function (button) {
                 button.addEventListener("click", function (e) {
                     e.preventDefault(); // Prevent double-tap issues
@@ -1679,11 +1669,6 @@
                     // Add backdrop, then bind event immediately
                     let $backdrop = $("<div class='navigation-backdrop'></div>");
                     $("body").append($backdrop);
-
-                    /*  $backdrop.on("click touchstart", function () {
-                        $nav.removeClass("open");
-                        $(this).remove();
-                    }); */
 
                 } else {
                     $nav.removeClass("open");

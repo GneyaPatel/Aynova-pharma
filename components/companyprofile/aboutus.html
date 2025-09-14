@@ -198,7 +198,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-flex justify-content-end md-header-contact me-3">
-                                    <a href="tel:+917984303039"
+                                    <a href="tel:+919998789409"
                                         class="text-light me-2 d-none d-sm-none d-md-none d-lg-block phone"><i
                                             class="fa-solid fa-phone-volume"></i> <span class="ms-1"><strong>+91
                                                 9998789409</strong></span></a>
@@ -497,13 +497,13 @@
                         <span class="text-blue">US</span>
                     </h1>
                     <p class="mt-3">
-                        After more than a decade of success, Ayunova INTERNATIONAL has established itself as India's go-to distributor of Ajanta ED products.
+                        With more than a decade of success, Ayunova International has established itself as one of India’s trusted names in the pharmaceutical export industry.
                     </p>
                     <ul class="list-unstyled mt-3">
-                        <li>✔ 20+ Experience</li>
-                        <li>✔ Government Recognised Exporter</li>
-                        <li>✔ Global market presence</li>
-                        <li>✔ Wide product range</li>
+                        <li>✔ 20+ years of expertise in the field</li>
+                        <li>✔ Recognised by the Government as a certified exporter</li>
+                        <li>✔ Strong presence across international markets</li>
+                        <li>✔ Wide and diverse product portfolio</li>
                     </ul>
                     </div>
                 </div>
@@ -527,7 +527,9 @@
             <!-- Text Left / Image Right -->
             <div class="col-12 col-md-6 order-1 order-md-0">
                 <p>
-                Our company has grown steadily throughout the years, allowing us to achieve global prominence in thepharmaceutical industry. We are large-scale distributors and providers of a wide range of pharmaceutical medications, life-saving treatments, and treatment supplies in areas such as nephrology, HIV, oncology, andvarious critical care units. We have accreditation from reputable pharmaceutical firms and brands, likeNovartis, Cipla, Glenmark, Mylan, and Natco, among many more. We provide our services throughout India. Inaddition to being a domestic provider, Ayunova INTERNATIONAL exports pharmaceutical goods worldwide. Our globalfamily consists of both domestic and foreign customers, with thousands of clients worldwide!
+                    Over the years, Ayunova International has steadily expanded, establishing itself as a trusted name in the global pharmaceutical export industry. We specialize in supplying a wide range of pharmaceutical medicines, life-saving therapies, and critical care products across key therapeutic areas such as nephrology, HIV, oncology, and intensive care.</p>
+                <p>
+                    With a strong network of international clients, we are committed to delivering high-quality, certified pharmaceutical products worldwide. Our ever-growing global customer base reflects our dedication to reliability, trust, and excellence in healthcare exports
                 </p>
             </div>
             <div class="col-12 col-md-6 order-0 order-md-1">
@@ -872,11 +874,8 @@
         // timeline history
         (function () {
             "use strict";
-            // define variables
             var items = document.querySelectorAll(".timeline li");
 
-            // check if an element is in viewport
-            // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
             function isElementInViewport(el) {
                 var rect = el.getBoundingClientRect();
                 return (
@@ -952,10 +951,6 @@
                 }).on('changed.owl.carousel', syncPosition2);
 
             function syncPosition(el) {
-                //if you set loop to false, you have to restore this next line
-                //var current = el.item.index;
-
-                //if you disable loop you have to comment this block
                 var count = el.item.count - 1;
                 var current = Math.round(el.item.index - (el.item.count / 2) - .5);
 
@@ -1017,7 +1012,7 @@
                 // console.log("hello")
                 $.ajax({
                     type: "POST",
-                    url: "https://Ayunovapharma.com/search",
+                    url: "http://127.0.0.1:52632/components/product/product.html",
                     data: {
                         keyword: $(this).val(),
                         _token: '2dVjMZqDPRM7zeCXvkPhueC9L9jRlNtV641nP7Vp'
