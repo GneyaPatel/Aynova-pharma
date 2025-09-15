@@ -1,27 +1,65 @@
 .banner {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.545), rgb(255, 255, 255)), /* transparent overlay */
-   url(/assets/images/common/bg.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
+    url(/assets/images/common/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 100px 10px 150px 10px;
-  margin-bottom: -5px;
-  position: relative;
+  background-position: center;
+  padding: 120px 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bgZoom 15s ease-in-out infinite alternate;
 }
 
-.banner-top-left p {
-  font-size: 20px;
+@keyframes bgZoom {
+  0% {
+    background-size: 100%;
+    background-position: center;
+  }
+  100% {
+    background-size: 200%; /* slight zoom-in */
+    background-position: center;
+  }
+}
+
+.banner-content p {
+  font-size: 22px;
   font-weight: 600;
-  color: #333333;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-.banner-top-left h2 {
-  font-size: 42px;
+.banner-content h2 {
+  font-size: 46px;
+  font-weight: 700;
+  margin: 8px 0;
 }
 
-.certificate-logo img {
-  margin: 5px 10px 14px 0px;
-  border-radius: 0.4rem;
+/* === Animation Effects === */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-down {
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+.fade-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.fade-up-delay {
+  animation: fadeInUp 1s ease-out 0.5s forwards;
+  opacity: 0; /* Hidden until animation */
+}
+
 
 .banner-top-left button.quot-btn:hover {
   cursor: pointer;
@@ -65,7 +103,7 @@
 .category-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* 6 per row */
-  gap: 0; /* remove gap between cards */
+  gap: 5; /* remove gap between cards */
 }
 
 .category-card {
@@ -108,7 +146,6 @@
 }
 
 .about-simple {
-  background: #f2f2f2; /* light gray */
   padding: 60px 20px;
 }
 

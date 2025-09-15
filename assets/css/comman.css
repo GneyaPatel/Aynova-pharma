@@ -357,37 +357,3 @@ html {
 .ios * {
   cursor: pointer;
 }
-
-.captcha-box {
-  background: url("https://weloxpharma.com/assets/img/icons/bright-squares.png")
-    no-repeat center center;
-  background-size: cover;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  color: #333;
-}
-.captcha-box .captcha-text {
-  font-size: 22px;
-  letter-spacing: 4px;
-  user-select: none;
-}
-
-.captcha-box .bold {
-  font-weight: bold;
-}
-
-.captcha-box .italic {
-  font-style: italic;
-}
-
-.captcha-box .bold-italic {
-  font-weight: bold;
-  font-style: italic;
-}
-
-.captcha-box .normal {
-  font-weight: normal;
-  font-style: normal;
-}
