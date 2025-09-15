@@ -321,11 +321,11 @@
 }
 
 .left-box {
-  background: #4cb8f4;
+  background: #71bdea;
 }
 
 .right-box {
-  background: #5f5f5f;
+  background: #9e9d9d;
 }
 
 .cylinder-box h4 {
@@ -1122,6 +1122,7 @@ a#showMore {
 @media (min-width: 768px) and (max-width: 1200px) {
   #navbar {
     margin: 0 10px;
+    background: #55c4eb;
   }
 
   #upcoming-event-link img {
@@ -1139,6 +1140,7 @@ a#showMore {
 @media (min-width: 1201px) and (max-width: 1600px) {
   #navbar {
     margin: 0 20px;
+    background: #55c4eb;
   }
 }
 
