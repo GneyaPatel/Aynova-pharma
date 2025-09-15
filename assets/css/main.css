@@ -92,7 +92,6 @@
 /* Category Section */
 .category {
   padding: 40px 20px;
-  background: #dddddd;
 }
 
 .category .container {
@@ -102,31 +101,33 @@
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 per row */
-  gap: 5; /* remove gap between cards */
+  grid-template-columns: repeat(4, 1fr); /* 6 per row */
 }
 
 .category-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
   overflow: hidden;
+  border-radius: 5%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: auto; /* keeps all circles aligned */
 }
 
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-  background-color: #3375aa;
 }
 
 .category-card a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   display: block;
   padding: 15px;
 }
 
 .category-card .image {
-  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,15 +135,27 @@
 }
 
 .category-card img {
-  max-height: 70px;
-  max-width: 100%;
+  height: 150px;
   object-fit: contain;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .category-name {
   font-size: 16px;
   font-weight: 600;
   color: #222;
+}
+
+.category-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(255, 253, 253, 0.55);
+  color: #000000;
+  transition: all .3s ease;
 }
 
 .about-simple {
@@ -331,92 +344,107 @@
 }
 
 .why-section {
-  padding: 50px 0;
+  padding: 60px 20px;
+  background: #f9fafc;
 }
 
-.cylinder-box {
-  background: #2c8ecf;
-  border-radius: 80px;
-  padding: 40px;
-  color: #fff;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.why-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #333;
 }
 
-.cylinder-box ul {
-  list-style-type: disc;   /* show bullets */
-  padding-left: 20px; /* space for bullets */
-  margin-bottom: 20px;
+.why-title span {
+  color: #2c8ecf;
 }
 
-.cylinder-box ul li {
-  font-size: 16px;
-  margin: 6px 0;
-  line-height: 1.6;
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
 }
 
-.left-box {
-  background: #71bdea;
+.why-left {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-.right-box {
-  background: #9e9d9d;
-}
-
-.cylinder-box h4 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.cylinder-box ul {
+.why-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
-.cylinder-box ul li {
+.why-list li {
   font-size: 16px;
-  margin: 5px 0;
+  margin: 8px 0;
+  padding-left: 22px;
+  position: relative;
 }
 
-.two-part {
+.why-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2c8ecf;
+  font-weight: bold;
+}
+
+.highlight-box {
   display: flex;
-  align-items: center;
   gap: 15px;
-  margin-top: 15px;
+  align-items: center;
+  background: #2c8ecf;
+  color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 20px;
 }
 
-.two-part img {
+.highlight-box img {
   width: 40px;
 }
 
-.grid-box {
+.why-right {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-.small-card {
+.stats-card {
   background: #fff;
-  color: #1d6e99;
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 14px;
+  padding: 25px 20px;
   text-align: center;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
-.small-card:hover {
-  transform: translateY(-5px);
+.stats-card:hover {
+  transform: translateY(-6px);
 }
 
-.small-card img {
-  width: 40px;
-  margin-bottom: 10px;
+.stats-card img {
+  width: 50px;
+  margin-bottom: 12px;
 }
+
+.stats-card h3 {
+  font-size: 24px;
+  color: #2c8ecf;
+  margin: 5px 0;
+}
+
+.stats-card p {
+  font-size: 14px;
+  color: #555;
+}
+
 
 
 .inquiry-section form button {
@@ -783,7 +811,7 @@ form .input-group.select-country-code .select-box input.search-box {
 }
 
 .text-green {
-  color: #55c4eb !important;
+  color: #0a0a0a !important;
 }
 
 .text-blue {
