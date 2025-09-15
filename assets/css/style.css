@@ -292,6 +292,7 @@ div#bg-gray {
     #51bb7a 100%
   ) !important;
 }
+
 #mainnav ul.menu {
   display: flex;
   justify-content: space-between;
@@ -309,11 +310,11 @@ div#bg-gray {
   line-height: 100px;
 }
 #mainnav > ul > li.home > a {
-  color: #fff;
+  color: #000000;
   font-weight: 900;
 }
 #mainnav > ul > li > a {
-  color: #fff;
+  color: #060606;
   font-size: 14px;
   margin: 0 15px;
   transition: 0.3s ease-in-out;
@@ -322,23 +323,20 @@ div#bg-gray {
   position: absolute;
   width: 300px;
   text-align: left;
-  background-color: #222;
   z-index: 99999999;
   transition: 0.3s ease-in-out;
-  border: 2px solid #008d97;
 }
 #mainnav ul.submenu li:first-child {
   border-top: none;
 }
-#mainnav ul.submenu > li {
-  border-top: 1px solid #333;
-}
+
 #mainnav ul li ul li {
   margin-left: 0;
 }
 #mainnav ul.submenu > li > a {
+  background-color: white;
   display: block;
-  color: #fff;
+  color: #000000;
   padding: 0 0 0 20px;
   line-height: 45px;
   -webkit-transition: 0.3s ease-in-out;
@@ -357,7 +355,7 @@ ul#submenue2 {
   top: 12px !important;
 }
 #mainnav > ul > li > a:hover {
-  color: #eee;
+  color: #159bfb;
 }
 .tcb-product-slider {
   background: url(https://unsplash.it/1240/530?image=721) 0 0 / cover no-repeat

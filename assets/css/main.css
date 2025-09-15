@@ -4,7 +4,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 10px 150px 10px;
-  margin-top: -24px;
   margin-bottom: -5px;
   position: relative;
 }
@@ -55,7 +54,7 @@
 /* Category Section */
 .category {
   padding: 40px 20px;
-  background: #b3b2b2;
+  background: #dddddd;
 }
 
 .category .container {
@@ -108,43 +107,34 @@
   color: #222;
 }
 
-
-.about-content {
-  margin-top: 75px;
-  margin-bottom: 75px;
+.about-simple {
+  background: #f2f2f2; /* light gray */
+  padding: 60px 20px;
 }
 
-.about-content p.mb-0 {
-  font-weight: 600;
-  font-style: italic;
+.about-simple p {
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #222;
+}
+
+.btn-custom {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #55c4eb; 
+  color: #fff;
   font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-.about-content {
-    position: relative;
-    padding: 50px 0;
+.btn-custom:hover {
+  background: #d97a12;
 }
-
-.about-box {
-    position: relative;
-    z-index: 2;
-    padding: 30px;
-    color: #fff; /* text visible on gradient */
-    text-align: justify;
-}
-
-.about-box::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 99%;  /* 3/4 width */
-    height: 100%;
-    background: linear-gradient(135deg, #17619e, #176e9e); /* Blue → Green gradient */
-    border-radius: 12px;
-    z-index: -1; /* keep behind content */
-}
-
 
 .explore-product {
   background-image: url(assets/image/bg-ptt.webp);
@@ -217,41 +207,52 @@
   background: #fff;
   color: #333;  /* normal black text */
 }
-
-.main-services {
-  margin-top: 75px;
-  margin-bottom: 50px;
-}
-
 .service-card {
-  background-color: white;
-  border-radius: 0 8px 8px 8px;
-  margin-top: 22px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
-.service-card .two-part {
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.service-card .icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #e6f7fb;
   display: flex;
   align-items: center;
-  margin-bottom: 2px;
+  justify-content: center;
+  font-size: 28px;
+  color: #006f97;
 }
 
-.service-card .two-part img {
-  background-color: #55c4eb;
-  border-radius: 0;
-  padding: 8px;
-  margin-right: 20px;
+.service-card h5 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #17619e;
 }
 
 .service-card p {
-  line-height: 1.3;
-  margin-bottom: 0;
-  padding: 10px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
 }
 
+
 .global-presence {
-  background-color: #176e9e;
+  background-color: #bde9ff;
   padding: 3.5rem 0;
-  color: white;
+  color: #176e9e;
 }
 
 .global-presence .ul-accordion .li-accordion .accordion-button:not(.collapsed) {
@@ -259,7 +260,7 @@
   border: 0;
   border-bottom: 1px solid;
   box-shadow: none !important;
-  color: white !important;
+  color: #176e9e !important;
   padding-bottom: 5px;
 }
 
@@ -272,7 +273,7 @@
 
 .global-presence .ul-accordion .li-accordion button {
   background-color: unset;
-  color: white;
+  color: #176e9e;
   padding: 4px 0px;
   font-size: 1rem !important;
   font-weight: 400 !important;
@@ -324,7 +325,7 @@
 }
 
 .right-box {
-  background: #1d6e99;
+  background: #5f5f5f;
 }
 
 .cylinder-box h4 {
@@ -899,7 +900,6 @@ form.search-lg-form {
 }
 
 #navbar {
-  background: #55c4eb;
   margin: 0 220px;
   padding: 14px 0;
   border-radius: 7px;
@@ -908,8 +908,7 @@ form.search-lg-form {
 .button-nav {
   outline: unset;
   border: none;
-  background-color: #176e9e;
-  color: white;
+  color: rgb(5, 5, 5);
   font-size: 20px;
   border-radius: 10px;
   padding: 4px 8px;
