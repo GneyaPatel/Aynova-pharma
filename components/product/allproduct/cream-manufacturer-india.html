@@ -1017,7 +1017,7 @@
                                         <div class="col-lg-2 col-md-3 com-sm-3 col-3 mt-2 category-box">
                                             <div class="card p-2"
                                                 style="box-shadow: 0 0 9px #ccc;background-color:#55c4eb;">
-                                                <a href="/components/product/allproduct/Suspension-manufacturer-india.html" tabindex="0"
+                                                <a href="/components/product/allproduct/suspension-syrup-manufacturer-india.html" tabindex="0"
                                                     style="color: #fff;">
                                                     <div class="image d-flex justify-content-center mt-1">
                                                         <img src="/assets/images/category/suspension.png"
@@ -1074,7 +1074,7 @@
                                         <div class="col-lg-2 col-md-3 com-sm-3 col-3 mt-2 category-box">
                                             <div class="card p-2"
                                                 style="box-shadow: 0 0 9px #ccc;background-color:#55c4eb;">
-                                                <a href="/components/product/allproduct/nasalDrops-manufacturer-india.html" tabindex="0" style="color: #fff;">
+                                                <a href="/components/product/allproduct/nasal-drops-manufacturer-india.html" tabindex="0" style="color: #fff;">
                                                     <div class="image d-flex justify-content-center mt-1">
                                                         <img src="/assets/images/category/Nasal Drops.svg"
                                                             alt="Nasal Drops" height="35px">
@@ -1134,49 +1134,64 @@
 
                 const credentials = btoa(`${username}:${appPassword}`);
 
-                // Function to load products of "Tablets" category
-                function loadTabletsProducts(categoryId) {
-                    fetch(`${apiUrl}/products?category=${categoryId}&per_page=20`, {
+                // Function to load products for any category
+                function loadCategoryProducts(categoryId) {
+                    // First fetch category info (to get its name)
+                    fetch(`${apiUrl}/products/categories/${categoryId}`, {
                         headers: { "Authorization": `Basic ${credentials}` }
                     })
-                    .then(response => response.json())
-                    .then(products => {
-                        let output = `<h2 class="mb-4">Tablets</h2><div class="row">`;
+                    .then(res => res.json())
+                    .then(category => {
+                        const categoryName = category.name || "Products";
 
-                        if (!products || products.length === 0) {
-                            output += "<p>No Tablet products found.</p>";
-                        } else {
-                            products.forEach(product => {
-                                const image = (product.images && product.images.length > 0) 
-                                    ? product.images[0].src 
-                                    : "/assets/images/no-image.png";
+                        // Now fetch products of this category
+                        fetch(`${apiUrl}/products?category=${categoryId}&per_page=20`, {
+                            headers: { "Authorization": `Basic ${credentials}` }
+                        })
+                        .then(response => response.json())
+                        .then(products => {
+                            let output = `<h2 class="mb-4">${categoryName}</h2><div class="row">`;
 
-                                output += `
-                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                                    <div class="card h-100 shadow-sm">
-                                        <a href="/components/product/productdetail.html?id=${product.id}" class="text-decoration-none text-dark">
-                                            <img src="${image}" class="card-img-top" alt="${product.name}">
-                                            <div class="card-body">
-                                                <h5 class="card-title">${product.name}</h5>
-                                                <p class="card-text text-primary fw-bold">₹${product.price || "0.00"}</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>`;
-                            });
-                        }
+                            if (!products || products.length === 0) {
+                                output += `<p>No products found in ${categoryName}.</p>`;
+                            } else {
+                                products.forEach(product => {
+                                    const image = (product.images && product.images.length > 0) 
+                                        ? product.images[0].src 
+                                        : "/assets/images/no-image.png";
 
-                        output += `</div>`;
-                        document.getElementById("products").innerHTML = output;
+                                    output += `
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                        <div class="card h-100 shadow-sm">
+                                            <a href="/components/product/productdetail.html?id=${product.id}" class="text-decoration-none text-dark">
+                                                <img src="${image}" class="card-img-top" alt="${product.name}">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">${product.name}</h5>
+                                                    <p class="card-text text-primary fw-bold">₹${product.price || "0.00"}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>`;
+                                });
+                            }
+
+                            output += `</div>`;
+                            document.getElementById("products").innerHTML = output;
+                        })
+                        .catch(error => {
+                            console.error("Error fetching products:", error);
+                            document.getElementById("products").innerHTML = `<p style="color:red;">Error: ${error.message}</p>`;
+                        });
                     })
                     .catch(error => {
-                        console.error("Error fetching Tablet products:", error);
-                        document.getElementById("products").innerHTML = `<p style="color:red;">Error: ${error.message}</p>`;
+                        console.error("Error fetching category:", error);
                     });
                 }
-                loadTabletsProducts(20);
-              
+
+                // Example: load category with ID 20
+                loadCategoryProducts(20);
             </script>
+
 
         </div>
     </main>
