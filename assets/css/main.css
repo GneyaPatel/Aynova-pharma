@@ -152,8 +152,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
-  background: rgba(255, 253, 253, 0.55);
+  padding: 75px;
+  background: rgba(255, 253, 253, 0.747);
   color: #000000;
   transition: all .3s ease;
 }
@@ -184,49 +184,6 @@
 
 .btn-custom:hover {
   background: #d97a12;
-}
-
-.explore-product {
-  background-image: url(assets/image/bg-ptt.webp);
-  background-color: #f2f2f280;
-  background-blend-mode: overlay;
-  padding: 60px 0px;
-}
-
-.explore-product .product-img {
-  margin-top: 1.5rem;
-}
-
-.explore-product .product-img img {
-  border-radius: 0.87rem;
-  padding: 0px;
-  max-height: 190px;
-}
-
-.explore-product .product-img .view-all-card a {
-  height: 190px;
-  line-height: 190px;
-  text-align: center;
-  display: block;
-}
-
-.explore-product .product-img .view-all-card {
-  border-radius: 0.87rem;
-}
-
-.explore-product .product-img .view-all-card p {
-  display: inline-block;
-  line-height: 1;
-  vertical-align: middle;
-}
-
-.explore-product .product-img .view-all-card svg {
-  display: block;
-  border: 1px solid;
-  padding: 1px 12px;
-  margin-left: 10px;
-  margin-top: 6px;
-  border-radius: 14px;
 }
 
 .accordion-button {
@@ -270,6 +227,7 @@
 .service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  background-color: #c3efff;
 }
 
 .service-card .icon {
@@ -300,7 +258,7 @@
 
 
 .global-presence {
-  background-color: #bde9ff;
+  background-color: #edf9ff;
   padding: 3.5rem 0;
   color: #176e9e;
 }
