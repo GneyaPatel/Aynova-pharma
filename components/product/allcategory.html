@@ -1128,14 +1128,16 @@
             <script>
                 const username = "itcode";
                 const appPassword = "rwu2 hotj ci9M 39Wq kTuO Jkkm";
-                const apiUrl = "http://localhost/wordpress/wp-json/wc/v3";
+                const apiUrl = "http://localhost/wordpress/wp-json/wc/v3/products";
                 const credentials = btoa(`${username}:${appPassword}`);
 
-                async function fetchProducts(categorySlug = "all") {
+                async function fetchProducts(categoryId = "all") {
                     let url = apiUrl;
 
-                    if (categorySlug !== "all") {
-                        url = `http://localhost/wordpress/wp-json/wc/v3/products?category=${categorySlug}`;
+                    if (categoryId !== "all") {
+                        url += `?category=${categoryId}&per_page=20`;
+                    } else {
+                        url += `?per_page=20`;
                     }
 
                     const response = await fetch(url, {
@@ -1143,11 +1145,31 @@
                             "Authorization": `Basic ${credentials}`
                         }
                     });
+
+                    if (!response.ok) {
+                        document.getElementById("productList").innerHTML = `<p style="color:red;">Error: ${response.status}</p>`;
+                        return;
+                    }
+
                     const products = await response.json();
 
+                    // ✅ Remove duplicates by ID
+                    const uniqueProducts = [];
+                    const seenIds = new Set();
+
+                    products.forEach(p => {
+                        if (!seenIds.has(p.id)) {
+                            seenIds.add(p.id);
+                            // ✅ Skip variations (only show parent products)
+                            if (p.type !== "variation") {
+                                uniqueProducts.push(p);
+                            }
+                        }
+                    });
+
                     let html = "";
-                    if (products.length) {
-                        products.forEach(p => {
+                    if (uniqueProducts.length) {
+                        uniqueProducts.forEach(p => {
                             html += `
                                 <div style="border:1px solid #ddd; padding:10px; margin:10px;">
                                     <h4>${p.name}</h4>
@@ -1159,6 +1181,7 @@
                     } else {
                         html = "<p>No products found.</p>";
                     }
+
                     document.getElementById("productList").innerHTML = html;
                 }
 
@@ -1169,11 +1192,12 @@
                 document.querySelectorAll("#categoryList a").forEach(link => {
                     link.addEventListener("click", function (e) {
                         e.preventDefault();
-                        const categorySlug = this.getAttribute("data-category");
-                        fetchProducts(categorySlug);
+                        const categoryId = this.getAttribute("data-category");
+                        fetchProducts(categoryId);
                     });
                 });
             </script>
+
         </div>
     </main>
 
