@@ -101,18 +101,33 @@
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 6 per row */
+  grid-template-columns: repeat(4, 1fr); /* default: 4 per row */
+  gap: 20px;
+}
+
+/* ✅ Mobile: 3 per row */
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ✅ Very small screens: 2 per row */
+@media (max-width: 480px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .category-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: center;
+  position: relative; /* for overlay positioning */
   overflow: hidden;
   border-radius: 5%;
-  justify-content: center;
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin: auto; /* keeps all circles aligned */
+  margin: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .category-card:hover {
@@ -122,23 +137,15 @@
 
 .category-card a {
   text-decoration: none;
-  color: #ffffff;
   display: block;
-  padding: 15px;
-}
-
-.category-card .image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
+  color: inherit;
 }
 
 .category-card img {
   height: 150px;
+  width: 100%;
   object-fit: contain;
-  justify-content: center;
-  overflow: hidden;
+  display: block;
 }
 
 .category-name {
@@ -147,15 +154,28 @@
   color: #222;
 }
 
+/* ✅ Overlay centered */
 .category-card .overlay {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  padding: 75px;
-  background: rgba(255, 253, 253, 0.747);
-  color: #000000;
+  height: 100%;              /* full card */
+  background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;       /* vertical + horizontal center */
+  text-align: center;
+  padding: 10px;
   transition: all .3s ease;
+}
+
+.category-card .overlay h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  word-break: break-word; /* fixes long text */
 }
 
 .about-simple {
@@ -320,9 +340,16 @@
 
 .why-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* 2 columns for desktop/tablet */
   gap: 40px;
   align-items: start;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr; /* single column */
+  }
 }
 
 .why-left {
@@ -352,6 +379,7 @@
   color: #2c8ecf;
   font-weight: bold;
 }
+
 
 .highlight-box {
   display: flex;

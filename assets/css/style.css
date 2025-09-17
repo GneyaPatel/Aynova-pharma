@@ -1962,13 +1962,13 @@ img {
   }
   .dk-footer-box-info {
     top: -122px;
-    background: #202020;
+    background: #979797;
     padding: 10px;
     z-index: 2;
   }
   .dk-footer {
     padding: 12px 0 0;
-    background-color: #151414;
+    background-color: #979797;
     position: relative;
     z-index: 2;
   }
