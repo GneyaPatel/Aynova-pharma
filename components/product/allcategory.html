@@ -1131,13 +1131,13 @@
                 const apiUrl = "http://localhost/wordpress/wp-json/wc/v3/products";
                 const credentials = btoa(`${username}:${appPassword}`);
 
-                async function fetchProducts(categoryId = "all") {
-                    let url = apiUrl;
+                async function fetchProducts(categorySlug = "all") {
+                    let url;
 
-                    if (categoryId !== "all") {
-                        url += `?category=${categoryId}&per_page=20`;
+                    if (categorySlug !== "all") {
+                        url = `${apiUrl}?category_slug=${categorySlug}&per_page=20`;
                     } else {
-                        url += `?per_page=20`;
+                        url = `${apiUrl}?per_page=20`;
                     }
 
                     const response = await fetch(url, {
@@ -1147,30 +1147,21 @@
                     });
 
                     if (!response.ok) {
-                        document.getElementById("productList").innerHTML = `<p style="color:red;">Error: ${response.status}</p>`;
+                        document.getElementById("productList").innerHTML =
+                            `<p style="color:red;">Error: ${response.status}</p>`;
                         return;
                     }
 
                     const products = await response.json();
 
-                    // ✅ Remove duplicates by ID
-                    const uniqueProducts = [];
-                    const seenIds = new Set();
-
-                    products.forEach(p => {
-                        if (!seenIds.has(p.id)) {
-                            seenIds.add(p.id);
-                            // ✅ Skip variations (only show parent products)
-                            if (p.type !== "variation") {
-                                uniqueProducts.push(p);
-                            }
-                        }
-                    });
-
                     let html = "";
-                    if (uniqueProducts.length) {
-                        uniqueProducts.forEach(p => {
+                    if (products.length) {
+                        products.forEach(p => {
+                            // Get category names from product
+                            const categoryNames = p.categories.map(c => c.name).join(", ");
+
                             html += `
+                            <p><strong> ${categoryNames || "Uncategorized"}</strong></p>
                                 <div style="border:1px solid #ddd; padding:10px; margin:10px;">
                                     <h4>${p.name}</h4>
                                     <p>${p.price_html || "No Price"}</p>
@@ -1192,8 +1183,8 @@
                 document.querySelectorAll("#categoryList a").forEach(link => {
                     link.addEventListener("click", function (e) {
                         e.preventDefault();
-                        const categoryId = this.getAttribute("data-category");
-                        fetchProducts(categoryId);
+                        const categorySlug = this.getAttribute("data-category"); // slug
+                        fetchProducts(categorySlug);
                     });
                 });
             </script>
