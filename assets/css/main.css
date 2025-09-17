@@ -128,6 +128,7 @@
   align-items: center;
   margin: auto;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .category-card:hover {
@@ -144,30 +145,36 @@
 .category-card img {
   height: 150px;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
+  transition: transform 0.4s ease; /* smooth zoom */
 }
 
-.category-name {
-  font-size: 16px;
-  font-weight: 600;
-  color: #222;
+/* ✅ Zoom effect on hover */
+.category-card:hover img {
+  transform: scale(1.1);
 }
 
-/* ✅ Overlay centered */
+/* ✅ Overlay (hidden by default) */
 .category-card .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;              /* full card */
+  height: 100%;              
   background: rgba(255, 255, 255, 0.75);
   display: flex;
   justify-content: center;
-  align-items: center;       /* vertical + horizontal center */
+  align-items: center;       
   text-align: center;
   padding: 10px;
-  transition: all .3s ease;
+  opacity: 0;                 /* hidden */
+  transition: opacity .3s ease;
+}
+
+/* ✅ Show overlay on hover */
+.category-card:hover .overlay {
+  opacity: 1;
 }
 
 .category-card .overlay h3 {
@@ -175,8 +182,9 @@
   font-weight: 600;
   color: #000;
   margin: 0;
-  word-break: break-word; /* fixes long text */
+  word-break: break-word;
 }
+
 
 .about-simple {
   padding: 60px 20px;
