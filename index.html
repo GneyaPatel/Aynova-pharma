@@ -116,6 +116,13 @@
         }
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("flha2vLVrWmnfOQi9"); // replace with your EmailJS user ID
+        })();
+    </script>
+
 </head>
 
 <body>
@@ -866,11 +873,7 @@
                         <img class="img-responsive" src="/assets/images/common/form-img.webp" alt="contact images">
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <form class="needs-validation" action="send_mail.php" name="inquiry" id="inquiry" method="POST"
-                            enctype="multipart/form-data">
-                            <input type="hidden" name="_token" value="2dVjMZqDPRM7zeCXvkPhueC9L9jRlNtV641nP7Vp"
-                                autocomplete="off"> <input type="hidden" name="_method" value="POST"> <input
-                                type="hidden" name="redirect" value="thankyou" />
+                        <form class="needs-validation" enctype="multipart/form-data"  id="contactForm" no-validate>
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <div class="input-group">
@@ -1283,6 +1286,19 @@
         <script defer src="/assets/js/splide.min.js"></script>
         <script defer src="/assets/js/splide-extension-auto-scroll.min.js"></script>
         <script defer src="/Webdesigning/all_js_json/iconify.min.js"></script>
+
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function(e) {
+                e.preventDefault();
+
+                emailjs.sendForm("service_42zp55s", "template_zsts7oj", this)
+                .then(function() {
+                    alert("✅ Message sent successfully!");
+                }, function(error) {
+                    alert("❌ Failed to send message: " + JSON.stringify(error));
+                });
+            });
+        </script>
 
         <script>
             jQuery(document).ready(function ($) {
