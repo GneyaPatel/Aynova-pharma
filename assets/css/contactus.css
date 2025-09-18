@@ -154,12 +154,10 @@ label.required:after {
 }
 .translate_language span.bd-round-left {
   width: 8px;
-  background: #176e9e;
   border-radius: 0 0 8px 0;
 }
 .translate_language span.bd-round-right {
   width: 8px;
-  background: #176e9e;
   border-radius: 0 0 0 8px;
   margin-right: -1px;
 }

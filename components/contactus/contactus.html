@@ -102,6 +102,12 @@
             document.documentElement.classList.add('ios');
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+   (function(){
+      emailjs.init("pdLy_BhSpEqZ0KJFl"); // replace with your EmailJS user ID
+   })();
+</script>
 </head>
 
 <body>
@@ -467,16 +473,12 @@
                         <div
                             class="form-container-a col-12 col-sm-12 col-md-12 col-lg-8 col-xl-6 p-3 offset-lg-2 mt-2 mt-lg-5 rounded-3">
                             <div class="m-0 inquiry-section ">
-                                <form class="needs-validation mt-0" action="/components/contactus/send_mail.php" method="POST" enctype="multipart/form-data" no-validate>
-                                    <input type="hidden" name="_token" value="JkyhRIfDdpxRg0N4ZTMrIaV14IXK0TAG0AX1rZLC"
-                                        autocomplete="off">
-                                    <input type="hidden" name="_method" value="POST"> <input type="hidden"
-                                        name="redirect" value="thankyou" />
+                                <form class="needs-validation mt-0" action="/components/contactus/send_mail.php" method="POST" enctype="multipart/form-data" id="contactForm" no-validate>
                                     <div class="d-lg-flex">
                                         <div class="input-group">
                                             <label for="name" class="form-label required">Name</label>
                                             <input type="text" class="form-control" id="name" name="name"
-                                                aria-describedby="name" required value="" />
+                                                aria-describedby="name" required value=""/>
                                         </div>
                                         <div class="input-group">
                                             <label for="email" class="form-label required">Email</label>
@@ -938,6 +940,19 @@
         <script defer src="/assets/js/splide.min.js"></script>
         <script defer src="/assets/js/splide-extension-auto-scroll.min.js"></script>
         <script defer src="/Webdesigning/all_js_json/iconify.min.js"></script>
+
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function(e) {
+                e.preventDefault();
+
+                emailjs.sendForm("service_3o90ga9", "template_zsts7oj", this)
+                .then(function() {
+                    alert("✅ Message sent successfully!");
+                }, function(error) {
+                    alert("❌ Failed to send message: " + JSON.stringify(error));
+                });
+            });
+        </script>
 
         <script>
             jQuery(document).ready(function ($) {
