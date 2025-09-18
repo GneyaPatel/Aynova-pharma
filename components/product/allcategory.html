@@ -1118,50 +1118,98 @@
 
                     console.log("Fetching:", url); // 🔍 Debugging
 
-                    const response = await fetch(url, {
-                        headers: {
-                            "Authorization": `Basic ${credentials}`
-                        }
-                    });
-
-                    if (!response.ok) {
-                        document.getElementById("productList").innerHTML =
-                            `<p style="color:red;">Error: ${response.status}</p>`;
-                        return;
-                    }
-
-                    const products = await response.json();
-                    console.log("Products:", products);
-
-                    let html = "";
-                    if (products.length) {
-                        products.forEach(p => {
-                            const categoryNames = p.categories.map(c => c.name).join(", ");
-                            html += `
-                                <div style="border:1px solid #ddd; padding:10px; margin:10px;">
-                                    <p><strong>${categoryNames}</strong></p>
-                                    <h4>${p.name}</h4>
-                                    <p>${p.price_html || "No Price"}</p>
-                                    ${p.images.length ? `<img src="${p.images[0].src}" width="100">` : ""}
-                                </div>
-                            `;
+                    try {
+                        const response = await fetch(url, {
+                            headers: { "Authorization": `Basic ${credentials}` }
                         });
-                    } else {
-                        html = "<p>No products found in this category.</p>";
-                    }
 
-                    document.getElementById("productList").innerHTML = html;
+                        if (!response.ok) {
+                            document.getElementById("productList").innerHTML =
+                                `<p style="color:red;">Error: ${response.status}</p>`;
+                            return;
+                        }
+
+                        const products = await response.json();
+                        console.log("Products:", products);
+
+                        let html = "";
+                        if (products.length) {
+                            products.forEach(p => {
+                                const categoryNames = p.categories.map(c => c.name).join(", ");
+                                html += `
+                                    <div style="border:1px solid #ddd; padding:10px; margin:10px;">
+                                        <p><strong>${categoryNames}</strong></p>
+                                        <h4>${p.name}</h4>
+                                        <p>${p.price_html || "No Price"}</p>
+                                        ${p.images.length ? `<img src="${p.images[0].src}" width="100">` : ""}
+                                    </div>
+                                `;
+                            });
+                        } else {
+                            html = "<p>No products found in this category.</p>";
+                        }
+
+                        document.getElementById("productList").innerHTML = html;
+
+                    } catch (err) {
+                        console.error("Fetch error:", err);
+                        document.getElementById("productList").innerHTML =
+                            `<p style="color:red;">Error: ${err.message}</p>`;
+                    }
                 }
 
-                // Handle subcategory clicks
+                // ✅ Handle subcategory clicks
                 document.querySelectorAll("#categoryList a").forEach(link => {
                     link.addEventListener("click", function (e) {
                         e.preventDefault();
                         const categoryId = this.getAttribute("data-category"); // must be subcategory ID
+                        console.log("Clicked category:", categoryId);
                         fetchProductsByCategory(categoryId);
                     });
                 });
-            </script>
+
+                fetchProductsByCategory(91);
+                fetchProductsByCategory(41);     
+                fetchProductsByCategory(42); 
+                fetchProductsByCategory(43);
+                fetchProductsByCategory(92); 
+                fetchProductsByCategory(45); 
+                fetchProductsByCategory(46); 
+                fetchProductsByCategory(47); 
+                fetchProductsByCategory(48); 
+                fetchProductsByCategory(49); 
+                fetchProductsByCategory(50); 
+                fetchProductsByCategory(51); 
+                fetchProductsByCategory(52); 
+                fetchProductsByCategory(53); 
+                fetchProductsByCategory(54); 
+                fetchProductsByCategory(55); 
+                fetchProductsByCategory(56); 
+                fetchProductsByCategory(57); 
+                fetchProductsByCategory(60); 
+                fetchProductsByCategory(61); 
+                fetchProductsByCategory(62); 
+                fetchProductsByCategory(63); 
+                fetchProductsByCategory(64); 
+                fetchProductsByCategory(66); 
+                fetchProductsByCategory(67); 
+                fetchProductsByCategory(69); 
+                fetchProductsByCategory(70);
+                fetchProductsByCategory(72); 
+                fetchProductsByCategory(74);
+                fetchProductsByCategory(75);
+                fetchProductsByCategory(76);
+                fetchProductsByCategory(77);
+                fetchProductsByCategory(78);
+                fetchProductsByCategory(81);
+                fetchProductsByCategory(82);
+                fetchProductsByCategory(84);
+                fetchProductsByCategory(86);
+                fetchProductsByCategory(87);
+                fetchProductsByCategory(88);
+                fetchProductsByCategory(89);
+                fetchProductsByCategory(90);
+                </script>
 
         </div>
     </main>
