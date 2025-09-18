@@ -1,33 +1,36 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Collect and sanitize inputs
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form values safely
     $name    = htmlspecialchars($_POST['name'] ?? '');
     $email   = htmlspecialchars($_POST['email'] ?? '');
+    $phone   = htmlspecialchars($_POST['phone'] ?? '');
+    $country = htmlspecialchars($_POST['country'] ?? '');
     $message = htmlspecialchars($_POST['message'] ?? '');
 
-    // Receiver email address
-    $to      = "patelgneya2180@gmail.com";  // 👉 Replace with your real email
-    $subject = "New Contact Form Submission";
+    // Your email (change this 👇)
+    $to = "gneyapatel81202@outlook.com";
 
-    // Email content
-    $body  = "You have a new message from your website contact form:\n\n";
+    // Subject
+    $subject = "New Contact Form Submission from $name";
+
+    // Email body
+    $body  = "You have received a new message from the contact form:\n\n";
     $body .= "Name: $name\n";
     $body .= "Email: $email\n";
+    $body .= "Phone: $phone\n";
+    $body .= "Country: $country\n";
     $body .= "Message:\n$message\n";
 
     // Headers
-    $headers  = "From: no-reply@yourdomain.com\r\n"; // use your domain email
+    $headers  = "From: $name <$email>\r\n";
     $headers .= "Reply-To: $email\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();
 
     // Send email
     if (mail($to, $subject, $body, $headers)) {
-        echo "Message sent successfully!";
+        echo "<script>alert('✅ Your message has been sent successfully!'); window.history.back();</script>";
     } else {
-        echo "Failed to send email. Check server mail configuration.";
+        echo "<script>alert('❌ Sorry, your message could not be sent. Please try again later.'); window.history.back();</script>";
     }
 } else {
-    http_response_code(405);
-    echo "Method Not Allowed";
+    echo "<script>alert('Invalid request.'); window.history.back();</script>";
 }
-?>
