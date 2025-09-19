@@ -45,6 +45,13 @@
   color: #222;
 }
 
+#blog-container .entry-title a {
+  pointer-events: none;   /* disables clicking */
+  cursor: default;        /* normal cursor */
+  text-decoration: none;  /* remove underline */
+  color: inherit;         /* use text color */
+}
+
 /* Blog Meta */
 #blog-container .entry-meta {
   text-align: center;
