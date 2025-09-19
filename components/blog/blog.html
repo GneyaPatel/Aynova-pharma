@@ -82,6 +82,7 @@
     <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
 
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
     <link rel="stylesheet" href="/assets/css/countrycode.css">
 
     <!-- Preload Owl Stylesheets -->
@@ -432,7 +433,50 @@
 
     <!--main content-->
     <div>
-        
+        <div id="content" class="site-content">
+            <div class="ast-container">
+                <div id="primary" class="content-area primary ast-grid-3 ast-blog-layout-4-grid">
+                    <main id="main" class="site-main">
+                        <div class="ast-row">
+                            <article
+                                class="post-598 post type-post status-publish format-standard has-post-thumbnail hentry category-blog category-developer ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding"
+                                id="post-598" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+                                <div id="blog-container">Loading blog layout...</div>
+                            </article>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const ajaxUrl = "http://localhost/wordpress/wp-admin/admin-ajax.php?action=load_bdpp_layout"; // Replace with your actual site URL
+
+                const container = document.querySelector("#blog-container");
+                if (!container) return;
+
+                fetch(ajaxUrl)
+                    .then(res => {
+                        if (!res.ok) throw new Error("Network response was not OK");
+                        return res.text();
+                    })
+                    .then(html => {
+                        if (!html || html.trim() === "" || html === "0") {
+                            container.innerHTML = "<p style='color:red;'>Failed to load blog layout. Check your PHP AJAX handler or layout ID.</p>";
+                            console.error("AJAX returned empty or 0. Make sure your layout ID exists and PHP handler is correct.");
+                        } else {
+                            container.innerHTML = html;
+                            console.log("Blog Designer Pack layout loaded successfully.");
+                        }
+                    })
+                    .catch(err => {
+                        console.error("Error loading Blog Designer Pack layout:", err);
+                        container.innerHTML = "<p style='color:red;'>Failed to load blog layout. Network or server error.</p>";
+                    });
+            });
+        </script>
+
     </div>
 
     <!--footer-->
@@ -517,7 +561,8 @@
                                 <a href="/components/product/allproduct/eye-drop-manufacturer-india.html">Eye drops</a>
                             </li>
                             <li>
-                                <a href="/components/product/allproduct/nasalDrops-manufacturer-india.html">Nosal drops</a>
+                                <a href="/components/product/allproduct/nasalDrops-manufacturer-india.html">Nosal
+                                    drops</a>
                             </li>
                             <li>
                                 <a href="/components/product/allproduct/inhaler-manufacturer-india.html">Inhaler</a>
@@ -532,7 +577,8 @@
                                 <a href="/components/product/allproduct/capsule-manufacturer-india.html">Capsule</a>
                             </li>
                             <li>
-                                <a href="/components/product/allproduct/Suspension-manufacturer-india.html">Suspensions/Syrups</a>
+                                <a
+                                    href="/components/product/allproduct/Suspension-manufacturer-india.html">Suspensions/Syrups</a>
                             </li>
                             <li>
                                 <a href="/components/product/allproduct/cream-manufacturer-india.html">Creams</a>
@@ -621,15 +667,15 @@
         <script defer src="/Webdesigning/all_js_json/iconify.min.js"></script>
 
         <script>
-            document.getElementById("contactForm").addEventListener("submit", function(e) {
+            document.getElementById("contactForm").addEventListener("submit", function (e) {
                 e.preventDefault();
 
                 emailjs.sendForm("service_42zp55s", "template_zsts7oj", this)
-                .then(function() {
-                    alert("✅ Message sent successfully!");
-                }, function(error) {
-                    alert("❌ Failed to send message: " + JSON.stringify(error));
-                });
+                    .then(function () {
+                        alert("✅ Message sent successfully!");
+                    }, function (error) {
+                        alert("❌ Failed to send message: " + JSON.stringify(error));
+                    });
             });
         </script>
 
@@ -982,4 +1028,5 @@
         </script>
     </div>
 </body>
+
 </html>
