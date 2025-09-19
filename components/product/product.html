@@ -1122,21 +1122,17 @@
             
             <script>
             const username = "itcode";           
-            const appPassword = "rwu2 hotj ci9M 39Wq kTuO Jkkm"; 
+            const appPassword = "NXC5 XvG2 0IxJ c42h UUad qsbe"; 
             const apiUrl = "http://localhost/wordpress/wp-json/wc/v3"; 
 
             const credentials = btoa(`${username}:${appPassword}`);
 
             // ✅ Function to fetch products of a single category
             function loadCategory(categoryId, categoryName, targetElementId) {
-                fetch(`${apiUrl}/products?category=${categoryId}&per_page=20`, {
-                    headers: { "Authorization": `Basic ${credentials}` }
-                })
+                fetch(`/wp-content/themes/your-theme/api-proxy.php?category=${categoryId}`)
                 .then(response => response.json())
                 .then(products => {
-                    let output = `
-                    <h2 class="category-title mb-4">${categoryName}</h2>
-                    <div class="row">`;
+                    let output = `<h2 class="category-title mb-4">${categoryName}</h2><div class="row">`;
 
                     if (!products || products.length === 0) {
                         output += "<p>No products found in this category.</p>";
@@ -1160,7 +1156,7 @@
                         });
                     }
 
-                    output += `</div>`; 
+                    output += `</div>`;
                     document.getElementById(targetElementId).innerHTML = output;
                 })
                 .catch(error => {
@@ -1182,7 +1178,6 @@
             loadCategory(26, "Ear Drops", "ear-drops");
             loadCategory(27, "Gel", "gel");
             </script>
-
 
         </div>
     </main>
