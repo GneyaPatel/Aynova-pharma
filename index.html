@@ -118,7 +118,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
-        (function(){
+        (function () {
             emailjs.init("flha2vLVrWmnfOQi9"); // replace with your EmailJS user ID
         })();
     </script>
@@ -296,7 +296,7 @@
                                                     </li>
                                                     <li class="nav-item border-top border-bottom">
                                                         <a type="button" class="ps-0 py-2" data-bs-toggle="dropdown"
-                                                            aria-expanded="false"> companyprofile<a>
+                                                            aria-expanded="false"> companyprofile</a>
                                                                 <i class="fa-solid fa-angle-down"></i>
                                                                 <ul class="dropdown-menu p-0">
                                                                     <li class=""><a
@@ -311,7 +311,7 @@
                                                                             Satisfaction </a></li>
                                                                     <li class=""><a
                                                                             href="/components/companyprofile/faq.html">Frequently
-                                                                            Asked Qution </a></li>
+                                                                            Asked Questions </a></li>
                                                                 </ul>
                                                     </li>
                                                     <li class="nav-item border-top border-bottom">
@@ -873,7 +873,7 @@
                         <img class="img-responsive" src="/assets/images/common/form-img.webp" alt="contact images">
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <form class="needs-validation" enctype="multipart/form-data"  id="contactForm" no-validate>
+                        <form class="needs-validation" enctype="multipart/form-data" id="contactForm" no-validate>
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <div class="input-group">
@@ -932,12 +932,14 @@
                                             <option value="Bermuda">Bermuda</option>
                                             <option value="Bhutan">Bhutan</option>
                                             <option value="Bolivia">Bolivia</option>
-                                            <option value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba
+                                            <option value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and
+                                                Saba
                                             </option>
                                             <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
                                             <option value="Botswana">Botswana</option>
                                             <option value="Brazil">Brazil</option>
-                                            <option value="British Indian Ocean Territory">British Indian Ocean Territory
+                                            <option value="British Indian Ocean Territory">British Indian Ocean
+                                                Territory
                                             </option>
                                             <option value="Brunei Darussalam">Brunei Darussalam</option>
                                             <option value="Bulgaria">Bulgaria</option>
@@ -957,7 +959,8 @@
                                             <option value="Colombia">Colombia</option>
                                             <option value="Comoros">Comoros</option>
                                             <option value="Congo">Congo</option>
-                                            <option value="Congo, Democratic Republic of the">Congo, Democratic Republic of the </option>
+                                            <option value="Congo, Democratic Republic of the">Congo, Democratic Republic
+                                                of the </option>
                                             <option value="Cook Islands">Cook Islands</option>
                                             <option value="Costa Rica">Costa Rica</option>
                                             <option value="Cote d'Ivoire">Cote d'Ivoire</option>
@@ -977,14 +980,16 @@
                                             <option value="Eritrea">Eritrea</option>
                                             <option value="Estonia">Estonia</option>
                                             <option value="Ethiopia">Ethiopia</option>
-                                            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                                            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)
+                                            </option>
                                             <option value="Faroe Islands">Faroe Islands</option>
                                             <option value="Fiji">Fiji</option>
                                             <option value="Finland">Finland</option>
                                             <option value="France">France</option>
                                             <option value="French Guiana">French Guiana</option>
                                             <option value="French Polynesia">French Polynesia</option>
-                                            <option value="French Southern Territories">French Southern Territories </option>
+                                            <option value="French Southern Territories">French Southern Territories
+                                            </option>
                                             <option value="Gabon">Gabon</option>
                                             <option value="Gambia">Gambia</option>
                                             <option value="Georgia">Georgia</option>
@@ -1175,7 +1180,8 @@
                                 <a href="/components/product/allproduct/eye-drop-manufacturer-india.html">Eye drops</a>
                             </li>
                             <li>
-                                <a href="/components/product/allproduct/nasalDrops-manufacturer-india.html">Nosal drops</a>
+                                <a href="/components/product/allproduct/nasalDrops-manufacturer-india.html">Nosal
+                                    drops</a>
                             </li>
                             <li>
                                 <a href="/components/product/allproduct/inhaler-manufacturer-india.html">Inhaler</a>
@@ -1190,7 +1196,8 @@
                                 <a href="/components/product/allproduct/capsule-manufacturer-india.html">Capsule</a>
                             </li>
                             <li>
-                                <a href="/components/product/allproduct/Suspension-manufacturer-india.html">Suspensions/Syrups</a>
+                                <a
+                                    href="/components/product/allproduct/Suspension-manufacturer-india.html">Suspensions/Syrups</a>
                             </li>
                             <li>
                                 <a href="/components/product/allproduct/cream-manufacturer-india.html">Creams</a>
@@ -1279,15 +1286,15 @@
         <script defer src="/Webdesigning/all_js_json/iconify.min.js"></script>
 
         <script>
-            document.getElementById("contactForm").addEventListener("submit", function(e) {
+            document.getElementById("contactForm").addEventListener("submit", function (e) {
                 e.preventDefault();
 
                 emailjs.sendForm("service_42zp55s", "template_mv9l0r4", this)
-                .then(function() {
-                    alert("✅ Message sent successfully!");
-                }, function(error) {
-                    alert("❌ Failed to send message: " + JSON.stringify(error));
-                });
+                    .then(function () {
+                        alert("✅ Message sent successfully!");
+                    }, function (error) {
+                        alert("❌ Failed to send message: " + JSON.stringify(error));
+                    });
             });
         </script>
 
