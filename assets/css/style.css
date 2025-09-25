@@ -915,7 +915,7 @@ footer p {
 }
 .dk-footer {
   padding: 75px 0 0;
-  background-color: #d3d0d0;
+  background-color: #d1cccc;
   position: relative;
   z-index: 2;
 }
@@ -2075,13 +2075,13 @@ img {
   }
   .dk-footer {
     padding: 35px 0 0;
-    background-color: #d3d0d0;
+    background-color: #d1cccc;
     position: relative;
     z-index: 2;
   }
   .dk-footer-box-info {
     top: -122px;
-    background: #d3d0d0;
+    background: #d1cccc;
     padding: 20px;
     z-index: 2;
   }
