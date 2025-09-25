@@ -670,12 +670,18 @@
 
     <!--scripts-->
     <div>
-        <!--script & js files-->
+        <!-- Bootstrap JS (required for dropdown/accordion) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
         <script src="/assets/js/jquery.min.js"></script>
-        <script defer src="/assets/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script defer src="/assets/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
         <script src="/assets/js/jquery.min.js"></script>
         <!-- javascript -->
-        <script defer src="/assets/js/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer src="/assets/js/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- Include Toastr JS -->
         <script src="/assets/js/toastr.min.js"></script>
         <!-- vendors -->
@@ -688,336 +694,364 @@
         <script defer src="/Webdesigning/all_js_json/iconify.min.js"></script>
 
         <script>
-        jQuery(document).ready(function ($) {
-            "use strict";
-            $('.blogs').owlCarousel({
-                items: 3,
-                loop: false,
-                margin: 18,
-                merge: true,
-                dots: false,
-                nav: false,
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: false,
-                        dots: true,
-                    },
-                    577: {
-                        items: 2,
-                        margin: 10,
-                        nav: false,
-                        dots: true
-                    },
-                    768: {
-                        items: 2
-                    },
-                    1170: {
-                        items: 3
-                    }
-                }
-            });
-        });
-
-        // timeline history
-        (function () {
-            "use strict";
-            // define variables
-            var items = document.querySelectorAll(".timeline li");
-
-            // check if an element is in viewport
-            // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-            function isElementInViewport(el) {
-                var rect = el.getBoundingClientRect();
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <=
-                    (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
-            }
-
-            function callbackFunc() {
-                for (var i = 0; i < items.length; i++) {
-                    if (isElementInViewport(items[i])) {
-                        items[i].classList.add("in-view");
-                    }
-                }
-            }
-
-            // listen for events
-            if (items.length) {
-                window.addEventListener("load", callbackFunc);
-                window.addEventListener("resize", callbackFunc);
-                window.addEventListener("scroll", callbackFunc);
-            }
-        })();
-
-        //bottom to top button
-        var btn = $('#top_button');
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 300) {
-                btn.addClass('show');
-            } else {
-                btn.removeClass('show');
-            }
-        });
-
-        btn.on('click', function (e) {
-            e.preventDefault();
-            $('html, body').animate({ scrollTop: 0 }, '300');
-        });
-
-        $(document).ready(function () {
-
-            var sync1 = $("#sync1");
-            var sync2 = $("#sync2");
-            var slidesPerPage = 4; //globaly define number of elements per page
-            var syncedSecondary = true;
-
-            sync1.owlCarousel({
-                items: 1,
-                slideSpeed: 2000,
-                nav: false,
-                autoplay: false,
-                dots: true,
-                loop: true,
-                responsiveRefreshRate: 200,
-                navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
-            }).on('changed.owl.carousel', syncPosition);
-
-            sync2
-                .on('initialized.owl.carousel', function () {
-                    sync2.find(".owl-item").eq(0).addClass("current");
-                })
-                .owlCarousel({
-                    items: slidesPerPage,
-                    dots: true,
-                    nav: false,
-                    smartSpeed: 200,
-                    slideSpeed: 500,
-                    slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
-                    responsiveRefreshRate: 100
-                }).on('changed.owl.carousel', syncPosition2);
-
-            function syncPosition(el) {
-                //if you set loop to false, you have to restore this next line
-                //var current = el.item.index;
-
-                //if you disable loop you have to comment this block
-                var count = el.item.count - 1;
-                var current = Math.round(el.item.index - (el.item.count / 2) - .5);
-
-                if (current < 0) {
-                    current = count;
-                }
-                if (current > count) {
-                    current = 0;
-                }
-
-                //end block
-
-                sync2
-                    .find(".owl-item")
-                    .removeClass("current")
-                    .eq(current)
-                    .addClass("current");
-                var onscreen = sync2.find('.owl-item.active').length - 1;
-                var start = sync2.find('.owl-item.active').first().index();
-                var end = sync2.find('.owl-item.active').last().index();
-
-                if (current > end) {
-                    sync2.data('owl.carousel').to(current, 100, true);
-                }
-                if (current < start) {
-                    sync2.data('owl.carousel').to(current - onscreen, 100, true);
-                }
-            }
-
-            function syncPosition2(el) {
-                if (syncedSecondary) {
-                    var number = el.item.index;
-                    sync1.data('owl.carousel').to(number, 100, true);
-                }
-            }
-
-            sync2.on("click", ".owl-item", function (e) {
+            document.getElementById("contactForm").addEventListener("submit", function (e) {
                 e.preventDefault();
-                var number = $(this).index();
-                sync1.data('owl.carousel').to(number, 300, true);
-            });
-        });
 
-        function searchBooks() {
-            var searchTerm = document.getElementById("search").value;
-            var books = document.getElementsByClassName("card");
-            for (var i = 0; i < books.length; i++) {
-                var bookName = books[i].getElementsByClassName("card-header")[0].innerHTML;
-                if (bookName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1) {
-                    books[i].style.display = "block";
-                } else {
-                    books[i].style.display = "none";
-                }
-            }
-        }
-        // AJAX call for autocomplete
-        $(document).ready(function () {
-            $("header .search-box").keyup(function () {
-                // console.log("hello")
-                $.ajax({
-                    type: "POST",
-                    url: "http://127.0.0.1:52632/components/product/product.html",
-                    data: {
-                        keyword: $(this).val(),
-                        _token: '2dVjMZqDPRM7zeCXvkPhueC9L9jRlNtV641nP7Vp'
-                    },
-                    beforeSend: function () {
-                        // $(".search-box").css("background", "#FFF url(LoaderIcon.gif) no-repeat 165px");
-                    },
-                    success: function (data) {
-                        // console.log(data);
-                        $(".suggesstion-box").show();
-                        $(".suggesstion-box").html(data);
-                        $(".search-box").css("background", "#FFF");
+                emailjs.sendForm("service_42zp55s", "template_mv9l0r4", this)
+                    .then(function () {
+                        alert("✅ Message sent successfully!");
+                    }, function (error) {
+                        alert("❌ Failed to send message: " + JSON.stringify(error));
+                    });
+            });
+        </script>
+
+        <script>
+            jQuery(document).ready(function ($) {
+                "use strict";
+                $('.blogs').owlCarousel({
+                    items: 3,        // Default: show 3 items at a time
+                    loop: false,     // Do NOT loop back to start after last slide
+                    margin: 18,      // 18px margin between items
+                    merge: true,     // Allows merging items with 'data-merge' attribute
+                    dots: false,     // Hide pagination dots by default
+                    nav: false,      // Hide prev/next arrows by default
+                    responsive: {
+                        0: { // Screen width 0px - 576px
+                            items: 1,      // Show 1 item
+                            nav: false,    // No arrows
+                            dots: true     // Show dots
+                        },
+                        577: { // Screen width 577px - 767px
+                            items: 2,      // Show 2 items
+                            margin: 10,    // Smaller gap between items
+                            nav: false,    // No arrows
+                            dots: true     // Show dots
+                        },
+                        768: { // Screen width 768px - 1169px
+                            items: 2       // Show 2 items
+                        },
+                        1170: { // Screen width 1170px and above
+                            items: 3       // Show 3 items
+                        }
                     }
                 });
             });
 
-            /** inner search input for product search in Category/brand/integrity **/
-            $('.title-category .search-input[name="product-item-search"]').on('input', function () {
-                keyword = $(this).val();
-                if (keyword == '') {
-                    $('.product-item').show(0);
-                    $('.category-heading').show(0);
-                    $('.category-heading').removeClass('first-visible');
-                    $('.scroll-spy-body').find('.category-heading:first').addClass('first-visible');
+            // timeline history
+            (function () {
+                "use strict";
+                var items = document.querySelectorAll(".timeline li");
+                function isElementInViewport(el) {
+                    var rect = el.getBoundingClientRect();
+                    return (
+                        rect.top >= 0 &&
+                        rect.left >= 0 &&
+                        rect.bottom <=
+                        (window.innerHeight || document.documentElement.clientHeight) &&
+                        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    );
+                }
 
-                } else {
-                    type = [];
-                    $('.product-item').each(function (ele) {
-                        name = $(this).attr('data-name');
-                        if (name.toLowerCase().includes(keyword.toLowerCase())) {
-                            $(this).show(0);
-                        } else {
-                            $(this).hide(0);
+                function callbackFunc() {
+                    for (var i = 0; i < items.length; i++) {
+                        if (isElementInViewport(items[i])) {
+                            items[i].classList.add("in-view");
                         }
-                        typevalue = $(this).attr('data-type');
-                        if (!type.includes(typevalue) && $(this).is(':visible')) {
-                            type.push(typevalue);
+                    }
+                }
+
+                // listen for events
+                if (items.length) {
+                    window.addEventListener("load", callbackFunc);
+                    window.addEventListener("resize", callbackFunc);
+                    window.addEventListener("scroll", callbackFunc);
+                }
+            })();
+
+            //bottom to top button
+            var btn = $('#top_button');
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 300) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+
+            btn.on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, '300');
+            });
+
+            $(document).ready(function () {
+
+                var sync1 = $("#sync1");
+                var sync2 = $("#sync2");
+                var slidesPerPage = 4; //globaly define number of elements per page
+                var syncedSecondary = true;
+
+                sync1.owlCarousel({
+                    items: 1,
+                    slideSpeed: 2000,
+                    nav: false,
+                    autoplay: false,
+                    dots: true,
+                    loop: true,
+                    responsiveRefreshRate: 200,
+                    navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
+                }).on('changed.owl.carousel', syncPosition);
+
+                sync2
+                    .on('initialized.owl.carousel', function () {
+                        sync2.find(".owl-item").eq(0).addClass("current");
+                    })
+                    .owlCarousel({
+                        items: slidesPerPage,
+                        dots: true,
+                        nav: false,
+                        smartSpeed: 200,
+                        slideSpeed: 500,
+                        slideBy: slidesPerPage,
+                        responsiveRefreshRate: 100
+                    }).on('changed.owl.carousel', syncPosition2);
+
+                function syncPosition(el) {
+                    var count = el.item.count - 1;
+                    var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+
+                    if (current < 0) {
+                        current = count;
+                    }
+                    if (current > count) {
+                        current = 0;
+                    }
+
+                    //end block
+
+                    sync2
+                        .find(".owl-item")
+                        .removeClass("current")
+                        .eq(current)
+                        .addClass("current");
+                    var onscreen = sync2.find('.owl-item.active').length - 1;
+                    var start = sync2.find('.owl-item.active').first().index();
+                    var end = sync2.find('.owl-item.active').last().index();
+
+                    if (current > end) {
+                        sync2.data('owl.carousel').to(current, 100, true);
+                    }
+                    if (current < start) {
+                        sync2.data('owl.carousel').to(current - onscreen, 100, true);
+                    }
+                }
+
+                function syncPosition2(el) {
+                    if (syncedSecondary) {
+                        var number = el.item.index;
+                        sync1.data('owl.carousel').to(number, 100, true);
+                    }
+                }
+
+                sync2.on("click", ".owl-item", function (e) {
+                    e.preventDefault();
+                    var number = $(this).index();
+                    sync1.data('owl.carousel').to(number, 300, true);
+                });
+            });
+
+            function searchBooks() {
+                var searchTerm = document.getElementById("search").value;
+                var books = document.getElementsByClassName("card");
+                for (var i = 0; i < books.length; i++) {
+                    var bookName = books[i].getElementsByClassName("card-header")[0].innerHTML;
+                    if (bookName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1) {
+                        books[i].style.display = "block";
+                    } else {
+                        books[i].style.display = "none";
+                    }
+                }
+            }
+            // AJAX call for autocomplete
+            $(document).ready(function () {
+                $("header .search-box").keyup(function () {
+                    // console.log("hello")
+                    $.ajax({
+                        type: "POST",
+                        url: "http://127.0.0.1:52632/components/product/product.html",
+                        data: {
+                            keyword: $(this).val(),
+                            _token: '2dVjMZqDPRM7zeCXvkPhueC9L9jRlNtV641nP7Vp'
+                        },
+                        beforeSend: function () {
+                            // $(".search-box").css("background", "#FFF url(LoaderIcon.gif) no-repeat 165px");
+                        },
+                        success: function (data) {
+                            // console.log(data);
+                            $(".suggesstion-box").show();
+                            $(".suggesstion-box").html(data);
+                            $(".search-box").css("background", "#FFF");
                         }
                     });
-                    i = 0;
-                    $('.category-heading').each(function (ele) {
-                        typevalue = $(this).attr('data-type');
-                        if (!type.includes(typevalue)) {
-                            $(this).hide(0);
-                        } else {
-                            $(this).show(0);
-                            if (i == 0) {
-                                $(this).addClass('first-visible');
-                                i = 1;
+                });
+
+                /** inner search input for product search in Category/brand/integrity **/
+                $('.title-category .search-input[name="product-item-search"]').on('input', function () {
+                    keyword = $(this).val();
+                    if (keyword == '') {
+                        $('.product-item').show(0);
+                        $('.category-heading').show(0);
+                        $('.category-heading').removeClass('first-visible');
+                        $('.scroll-spy-body').find('.category-heading:first').addClass('first-visible');
+
+                    } else {
+                        type = [];
+                        $('.product-item').each(function (ele) {
+                            name = $(this).attr('data-name');
+                            if (name.toLowerCase().includes(keyword.toLowerCase())) {
+                                $(this).show(0);
                             } else {
-                                $(this).removeClass('first-visible');
+                                $(this).hide(0);
                             }
-                        }
-                    });
+                            typevalue = $(this).attr('data-type');
+                            if (!type.includes(typevalue) && $(this).is(':visible')) {
+                                type.push(typevalue);
+                            }
+                        });
+                        i = 0;
+                        $('.category-heading').each(function (ele) {
+                            typevalue = $(this).attr('data-type');
+                            if (!type.includes(typevalue)) {
+                                $(this).hide(0);
+                            } else {
+                                $(this).show(0);
+                                if (i == 0) {
+                                    $(this).addClass('first-visible');
+                                    i = 1;
+                                } else {
+                                    $(this).removeClass('first-visible');
+                                }
+                            }
+                        });
+                    }
+                });
+                $('.title-category .search-input[name="item-search"]').on('input', function () {
+                    keyword = $(this).val();
+                    target = $(this).data('target');
+                    if (keyword == '') {
+                        $(target).show(0);
+                    } else {
+                        $(target).each(function (ele) {
+                            name = $(this).attr('data-name');
+                            if (name.toLowerCase().includes(keyword.toLowerCase())) {
+                                $(this).show(0);
+                            } else {
+                                $(this).hide(0);
+                            }
+                        });
+                    }
+                });
+            });
+
+            $(document).ready(function () {
+                // Hide all <li> items except the first 20
+                $('#myList li').slice(20).hide();
+
+                // When the "Show more" link is clicked
+                $('#showMore').click(function (e) {
+                    e.preventDefault(); // Prevent the default action (link behavior)
+
+                    // Show the hidden <li> items
+                    $('#myList li').slice(20).slideDown();
+
+                    // Hide the "Show more" link after all items are revealed
+                    $(this).hide();
+                });
+
+                if ($('#myList li').length < 20) {
+                    $('#showMore').hide(0);
                 }
             });
-            $('.title-category .search-input[name="item-search"]').on('input', function () {
-                keyword = $(this).val();
-                target = $(this).data('target');
-                if (keyword == '') {
-                    $(target).show(0);
+
+            window.onscroll = function () { myFunction() };
+
+            // Get both navigation bars
+            var navbar = document.getElementById("navbar");
+            var navbarResponsive = document.getElementById("navbar_responsive");
+
+            // Get the offset position of both navigation bars
+            var sticky = navbar.offsetTop;
+            var stickyResponsive = navbarResponsive.offsetTop;
+
+            function myFunction() {
+                // Apply the sticky class to the first navbar if the scroll position meets the condition
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky");
                 } else {
-                    $(target).each(function (ele) {
-                        name = $(this).attr('data-name');
-                        if (name.toLowerCase().includes(keyword.toLowerCase())) {
-                            $(this).show(0);
-                        } else {
-                            $(this).hide(0);
-                        }
-                    });
+                    navbar.classList.remove("sticky");
                 }
-            });
-        });
 
-        $(document).ready(function () {
-            // Hide all <li> items except the first 20
-            $('#myList li').slice(20).hide();
-
-            // When the "Show more" link is clicked
-            $('#showMore').click(function (e) {
-                e.preventDefault(); // Prevent the default action (link behavior)
-
-                // Show the hidden <li> items
-                $('#myList li').slice(20).slideDown();
-
-                // Hide the "Show more" link after all items are revealed
-                $(this).hide();
+                // Apply the sticky class to the second (responsive) navbar if the scroll position meets the condition
+                if (window.pageYOffset >= stickyResponsive) {
+                    navbarResponsive.classList.add("sticky");
+                } else {
+                    navbarResponsive.classList.remove("sticky");
+                }
+            }
+            document.querySelectorAll(".button-nav").forEach(function (button) {
+                button.addEventListener("click", function (e) {
+                    e.preventDefault(); // Prevent double-tap issues
+                    toggleMenu();
+                });
             });
 
-            if ($('#myList li').length < 20) {
-                $('#showMore').hide(0);
-            }
-        });
+            function toggleMenu() {
+                var $nav = $("#navigation-demo");
+                var isOpen = $nav.hasClass("open");
 
-        window.onscroll = function () { myFunction() };
+                if (!isOpen) {
+                    $nav.addClass("open");
 
-        // Get both navigation bars
-        var navbar = document.getElementById("navbar");
-        var navbarResponsive = document.getElementById("navbar_responsive");
+                    // Add backdrop, then bind event immediately
+                    let $backdrop = $("<div class='navigation-backdrop'></div>");
+                    $("body").append($backdrop);
 
-        // Get the offset position of both navigation bars
-        var sticky = navbar.offsetTop;
-        var stickyResponsive = navbarResponsive.offsetTop;
-
-        function myFunction() {
-            // Apply the sticky class to the first navbar if the scroll position meets the condition
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky");
-            } else {
-                navbar.classList.remove("sticky");
+                } else {
+                    $nav.removeClass("open");
+                    $(".navigation-backdrop").remove();
+                }
             }
 
-            // Apply the sticky class to the second (responsive) navbar if the scroll position meets the condition
-            if (window.pageYOffset >= stickyResponsive) {
-                navbarResponsive.classList.add("sticky");
-            } else {
-                navbarResponsive.classList.remove("sticky");
-            }
-        }
-        // $( document ).on( "touchstart", ".button-nav, .navigation-backdrop", nvBackdrop);
-        // $( document ).on( "click", ".button-nav, .navigation-backdrop",nvBackdrop);
-        document.querySelectorAll(".button-nav").forEach(function (button) {
-            button.addEventListener("click", function (e) {
-                e.preventDefault(); // Prevent double-tap issues
-                toggleMenu();
-            });
-        });
+        </script>
 
-        function toggleMenu() {
-            var $nav = $("#navigation-demo");
-            var isOpen = $nav.hasClass("open");
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-            if (!isOpen) {
-                $nav.addClass("open");
-
-                // Add backdrop, then bind event immediately
-                let $backdrop = $("<div class='navigation-backdrop'></div>");
-                $("body").append($backdrop);
-
-                /*  $backdrop.on("click touchstart", function () {
-                        $nav.removeClass("open");
-                        $(this).remove();
-                    }); */
-
-            } else {
-                $nav.removeClass("open");
-                $(".navigation-backdrop").remove();
-            }
-        }
-
+        <script>
+            var swiper = new Swiper(".product-carousel",
+                {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                    loop: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    breakpoints: {
+                        0: { slidesPerView: 1 },
+                        576: { slidesPerView: 2 },
+                        768: { slidesPerView: 3 },
+                        1200: { slidesPerView: 4 }
+                    }
+                });
         </script>
     </div>
 

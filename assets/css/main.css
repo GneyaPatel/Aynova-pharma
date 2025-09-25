@@ -438,8 +438,6 @@
   color: #555;
 }
 
-
-
 .inquiry-section form button {
   margin-top: 0.6rem;
   padding: 5px 25px;
@@ -970,11 +968,6 @@ form.search-lg-form {
   padding: 4px 8px;
 }
 
-#upcoming-event-link img {
-  max-width: 100px;
-  margin-left: 5.5rem;
-}
-
 .mobile-header-logo {
   height: 40px;
 }
@@ -1124,11 +1117,6 @@ a#showMore {
     background-size: 0.75rem;
   }
 
-  #upcoming-event-link img {
-    max-width: 75px;
-    margin-left: 1.5rem;
-  }
-
   .category-box-name {
     font-size: 12px !important;
     padding-top: 2px;
@@ -1154,35 +1142,12 @@ a#showMore {
   line-height: 1;
 }
 
-/* 0px to 320px */
-
-@media only screen and (max-width: 320px) {
-  #upcoming-event-link img {
-    max-width: 50px;
-    margin-left: 1rem;
-  }
-}
-
-/* 577px to 768px */
-
-@media (min-width: 577px) and (max-width: 768px) {
-  #upcoming-event-link img {
-    max-width: 80px;
-    margin-left: 4rem;
-  }
-}
-
 /* 768px to 1200px */
 
 @media (min-width: 768px) and (max-width: 1200px) {
   #navbar {
     margin: 0 10px;
     background: #55c4eb;
-  }
-
-  #upcoming-event-link img {
-    max-width: 80px;
-    margin-left: 4rem;
   }
 
   .first-tag {

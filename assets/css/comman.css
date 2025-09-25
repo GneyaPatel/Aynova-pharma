@@ -54,7 +54,6 @@ label.required:after {
 /* new header */
 
 .translate_language {
-  background: white;
   margin-top: -1px;
   display: flex;
   justify-content: space-between;
@@ -138,16 +137,12 @@ form.search-lg-form {
 .button-nav {
   outline: unset;
   border: none;
-  background-color: #176e9e;
-  color: white;
+  color: rgb(5, 5, 5);
   font-size: 20px;
   border-radius: 10px;
   padding: 4px 8px;
 }
-#upcoming-event-link img {
-  max-width: 100px;
-  margin-left: 5.5rem;
-}
+
 .mobile-header-logo {
   height: 40px;
 }
@@ -205,10 +200,11 @@ a#showMore {
   font-weight: 600;
   text-transform: lowercase;
 }
-/* main category card set */
 
+/* main category card set */
 /* responsive */
 /* 0 to 768px */
+
 @media only screen and (max-width: 576px) {
   img.img-foot {
     width: 60%;
@@ -272,10 +268,6 @@ a#showMore {
     height: 0.75rem;
     background-size: 0.75rem;
   }
-  #upcoming-event-link img {
-    max-width: 75px;
-    margin-left: 1.5rem;
-  }
   .category-box-name {
     font-size: 12px !important;
     padding-top: 2px;
@@ -296,29 +288,12 @@ a#showMore {
   height: 86px;
   line-height: 1;
 }
-/* 0px to 320px */
-@media only screen and (max-width: 320px) {
-  #upcoming-event-link img {
-    max-width: 50px;
-    margin-left: 1rem;
-  }
-}
-/* 577px to 768px */
-@media (min-width: 577px) and (max-width: 768px) {
-  #upcoming-event-link img {
-    max-width: 80px;
-    margin-left: 4rem;
-  }
-}
 
 /* 768px to 1200px */
 @media (min-width: 768px) and (max-width: 1200px) {
   #navbar {
     margin: 0 10px;
-  }
-  #upcoming-event-link img {
-    max-width: 80px;
-    margin-left: 4rem;
+    background: #55c4eb;
   }
   .first-tag {
     margin-top: 0px;
@@ -328,6 +303,7 @@ a#showMore {
 @media (min-width: 1201px) and (max-width: 1600px) {
   #navbar {
     margin: 0 20px;
+    background: #55c4eb;
   }
 }
 
