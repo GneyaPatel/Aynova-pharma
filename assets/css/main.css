@@ -656,6 +656,8 @@
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    display: block; 
+    margin: 0 auto;
   }
 
   .main-services .service-card .two-part > img {
